@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Installs Kisan Mitra as a boot-time systemd service on a Raspberry Pi
+# Installs PRAGYA as a boot-time systemd service on a Raspberry Pi
 # (or any Linux machine).
 #
 #   sudo ./deploy/deploy.sh

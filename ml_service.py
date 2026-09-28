@@ -1,4 +1,4 @@
-"""Local, offline machine-learning inference for KISAN MITRA."""
+"""Local, offline machine-learning inference for PRAGYA."""
 from __future__ import annotations
 
 import time

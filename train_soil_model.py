@@ -1,4 +1,4 @@
-"""Train KISAN MITRA's local soil-fertility classifier."""
+"""Train PRAGYA's local soil-fertility classifier."""
 from pathlib import Path
 import csv
 

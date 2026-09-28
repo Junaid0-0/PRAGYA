@@ -1,6 +1,6 @@
-# KISAN MITRA - offline-first farm intelligence
+# PRAGYA — Predictive Robotics for Agricultural Growth & Yield Analytics
 
-KISAN MITRA is a Raspberry Pi-friendly farm dashboard. It accepts local sensor data from an Arduino, runs its core predictions on the device, stores farm history and uploaded analysis thumbnails in SQLite-backed local storage, and pushes live results to a lightweight browser UI. Disease, crop, soil, and pest image inference run offline. An optional Gemini key enables text chat and explanations; uploaded images are never sent to Gemini.
+PRAGYA (Predictive Robotics for Agricultural Growth & Yield Analytics) is a Raspberry Pi-friendly farm dashboard. It accepts local sensor data from an Arduino, runs its core predictions on the device, stores farm history and uploaded analysis thumbnails in SQLite-backed local storage, and pushes live results to a lightweight browser UI. Disease, crop, soil, and pest image inference run offline. An optional Gemini key enables text chat and explanations; uploaded images are never sent to Gemini.
 
 ## Getting started
 

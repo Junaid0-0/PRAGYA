@@ -4,25 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#18352b">
-  <meta name="description" content="Kisan Mitra — local farm intelligence that works offline.">
-  <title>Kisan Mitra</title>
+  <meta name="description" content="PRAGYA — Predictive Robotics for Agricultural Growth &amp; Yield Analytics. Local farm intelligence that works offline.">
+  <title>PRAGYA — Predictive Robotics for Agricultural Growth &amp; Yield Analytics</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%2327734b'/%3E%3Cpath d='M20 9c-5 3.5-7 7.6-7 11.2 0 4.2 3.1 7 7 7s7-2.8 7-7C27 16.6 25 12.5 20 9Z' fill='white'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="guest">
   <a class="skip-link" href="#mainContent">Skip to content</a>
   <div class="app-shell">
     <aside class="sidebar">
-      <button class="brand" id="brandHome" type="button" aria-label="Kisan Mitra home">
+      <button class="brand" id="brandHome" type="button" aria-label="PRAGYA home">
         <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="currentColor"/><path d="M20 9c-5 3.5-7 7.6-7 11.2 0 4.2 3.1 7 7 7s7-2.8 7-7C27 16.6 25 12.5 20 9Z" fill="#fff"/><path d="M20 14v10m0-5.6-3.2-2.2m3.2 5 3.5-2.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <span>Kisan Mitra<small data-i18n="brand_tag">Local farm intelligence</small></span>
+        <span>PRAGYA<small data-i18n="brand_tag">Local farm intelligence</small></span>
       </button>
+      <div id="demoModeBadge" class="demo-mode-badge" hidden>RECORDING MODE · DEMO DATA</div>
       <nav class="nav" aria-label="Main navigation" role="tablist">
         <button class="nav-item is-active" id="tab-overview" data-tab="overview" type="button" role="tab" aria-selected="true" aria-controls="page-overview"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h6V4H4v9Zm10 7h6v-9h-6v9ZM4 20h6v-3H4v3Zm10-13h6V4h-6v3Z"/></svg><span data-i18n="nav_overview">Overview</span></button>
         <button class="nav-item" id="tab-field" data-tab="field" type="button" role="tab" aria-selected="false" aria-controls="page-field" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 3.5C13 3.7 7.8 6 5.4 10.1c-1.7 2.9-1.3 6 .7 7.7L3.8 20a1 1 0 0 0 1.4 1.4l2.3-2.3c1.9 1 4.3.8 6.5-.5 4.3-2.5 6.5-7.7 6.5-14.1a1 1 0 0 0-1-1Zm-7 13.4c-1.2.7-2.4.9-3.4.6l6.6-6.6a1 1 0 0 0-1.4-1.4l-6.7 6.7c-.8-1.2-.8-3.1.1-5 1.8-3 5.7-4.9 10.7-5.5-.3 5.1-2.3 9.2-5.9 11.2Z"/></svg><span data-i18n="nav_field">Field tools</span></button>
-        <button class="nav-item" id="tab-models" data-tab="models" type="button" role="tab" aria-selected="false" aria-controls="page-models" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v6H4V5Zm9 0h7v10h-7V5ZM4 13h7v6H4v-6Zm9 12v-4h7v4h-7Z"/></svg><span data-i18n="nav_models">AI Models</span></button>
+        <button class="nav-item" id="tab-models" data-tab="models" type="button" role="tab" aria-selected="false" aria-controls="page-models" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v6H4V5Zm9 0h7v10h-7V5ZM4 13h7v6H4v-6Zm9 12v-4h7v4h-7Z"/></svg><span data-i18n="nav_models">Edge AI</span></button>
         <button class="nav-item" id="tab-chat" data-tab="chat" type="button" role="tab" aria-selected="false" aria-controls="page-chat" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H8l-4 4V4Zm3 4v2h10V8H7Zm0 4v2h7v-2H7Z"/></svg><span data-i18n="nav_chat">Chatbot</span></button>
         <button class="nav-item" id="tab-rover" data-tab="rover" type="button" role="tab" aria-selected="false" aria-controls="page-rover" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l2 6v4h-2a3 3 0 0 1-6 0h-2a3 3 0 0 1-6 0H3v-4l2-6Zm3 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6.5 9l-1 3h13l-1-3h-11Z"/></svg><span data-i18n="nav_rover">Rover</span></button>
+        <button class="nav-item" id="tab-mapping" data-tab="mapping" type="button" role="tab" aria-selected="false" aria-controls="page-mapping" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 4.5-6-2.1-5.1 1.8A1 1 0 0 0 3 5.1v13.4a1 1 0 0 0 1.3 1l5-1.8 6 2.1 5.1-1.8a1 1 0 0 0 .6-.9V5.7a1 1 0 0 0-1.3-1L15 4.5Zm-1 13.9-4-1.4V5.6l4 1.4v11.4ZM5 6.1l3-1.1v11.4l-3 1.1V6.1Zm14 11.8-3 1.1V7.6l3-1.1v11.4Z"/></svg><span data-i18n="nav_mapping">Mapping</span></button>
         <button class="nav-item" id="tab-history" data-tab="history" type="button" role="tab" aria-selected="false" aria-controls="page-history" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 1-8 8H2a10 10 0 1 0 3-7.1V3h2v5H2V6h2.1A9.9 9.9 0 0 1 12 4Zm1 4v5l4 2-.8 1.6L11 13V8h2Z"/></svg><span data-i18n="nav_history">History</span></button>
         <button class="nav-item" id="tab-system" data-tab="system" type="button" role="tab" aria-selected="false" aria-controls="page-system" tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 13a7.8 7.8 0 0 0 0-2l2-1.5-2-3.5-2.4 1a8 8 0 0 0-1.7-1L15 3.5h-4L10.7 6A8 8 0 0 0 9 7L6.6 6l-2 3.5 2 1.5a7.8 7.8 0 0 0 0 2l-2 1.5 2 3.5L9 17a8 8 0 0 0 1.7 1l.3 2.5h4l.3-2.5a8 8 0 0 0 1.7-1l2.4 1 2-3.5-2-1.5ZM13 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z"/></svg><span data-i18n="nav_system">System</span></button>
       </nav>
@@ -35,102 +37,1251 @@
     <main id="mainContent" tabindex="-1">
       <div class="offline-banner" id="offlineBanner" role="alert" hidden><span data-i18n="offline_message">Live updates are unavailable. Showing the last reading.</span><button id="retryBtn" type="button" data-i18n="retry">Retry</button></div>
       <section class="page is-active" id="page-overview" role="tabpanel" aria-labelledby="tab-overview">
-        <section class="landing-panel" id="landingPanel">
-          <p class="overline">Kisan Mitra</p><h1 data-i18n="home_title">One farm system, online or offline</h1>
-          <p data-i18n="home_intro">Monitor sensors, analyze crops and leaves, hear results, review history, and connect field robotics from one interface.</p>
-          <div class="feature-cloud"><span>Disease AI</span><span>Pest screening</span><span>Soil &amp; crop AI</span><span>NPK sensors</span><span>Chatbot</span><span>Text to speech</span><span>Edge AI</span><span>Cloud AI</span><span>Rover</span></div>
-          <div class="landing-actions"><button class="primary-button" id="landingLogin" type="button" data-i18n="sign_in">Sign in</button><button class="secondary-button" id="landingSignup" type="button" data-i18n="sign_up">Sign up</button></div>
+        <section class="landing-hero-container" id="landingPanel">
+          <!-- Top Navigation Header -->
+          <header class="landing-nav" aria-label="Public header">
+            <div class="landing-nav-brand">
+              <span class="landing-brand-title">PRAGYA</span>
+              <span class="landing-brand-sub" data-i18n="landing_brand_sub">Predictive Robotics for Agricultural Growth &amp; Yield Analytics</span>
+            </div>
+            <div class="landing-nav-actions">
+              <div class="landing-lang-toggle" role="group" aria-label="Language">
+                <button id="landingLangEn" class="is-active" type="button">EN</button>
+                <button id="landingLangHi" type="button">हिंदी</button>
+              </div>
+              <button class="landing-btn-text" id="landingNavLogin" type="button" data-i18n="sign_in">Sign in</button>
+              <button class="landing-btn-pill" id="landingNavSignup" type="button" data-i18n="get_started">Get started</button>
+            </div>
+          </header>
+
+          <!-- Main Hero Stage (~1 Viewport) -->
+          <div class="landing-hero-stage">
+            <!-- Full Rover Presentation Visual (Uncropped, Proportional, Cinematic) -->
+            <div class="landing-rover-frame">
+              <img
+                src="assets/rover_field_hero.jpg"
+                alt="PRAGYA Rover in the field"
+                class="landing-rover-img"
+                width="1024"
+                height="577"
+                fetchpriority="high"
+              >
+            </div>
+
+            <!-- Left Minimal Visual Anchor -->
+            <div class="landing-hero-content">
+              <span class="landing-hero-eyebrow" data-i18n="landing_hero_eyebrow">PRAGYA</span>
+              <h1 class="landing-hero-title">
+                <span data-i18n="landing_hero_title_1">SMART FARMING,</span>
+                <span data-i18n="landing_hero_title_2">BUILT FOR THE FIELD.</span>
+              </h1>
+              <p class="landing-hero-tagline" data-i18n="landing_hero_tagline">Sense the field. Understand the crop. Act with confidence.</p>
+              <div class="landing-hero-actions">
+                <button class="landing-primary-cta" id="landingSignup" type="button" data-i18n="get_started">Get started</button>
+                <button class="landing-secondary-cta" id="landingLogin" type="button" data-i18n="sign_in">Sign in</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Below-the-fold Continuation -->
+          <div class="landing-sub-section">
+            <div class="sub-section-inner">
+              <h2 class="landing-sub-statement" data-i18n="landing_sub_statement">From soil sensing to field action.</h2>
+              <div class="landing-continuum">
+                <div class="continuum-step">
+                  <span class="continuum-num">01</span>
+                  <strong class="continuum-label" data-i18n="step_1_title">Root-Depth Telemetry</strong>
+                  <p class="continuum-desc" data-i18n="step_1_desc">Direct measurement of NPK, moisture, soil pH, and electrical conductivity without laboratory delays.</p>
+                </div>
+                <div class="continuum-divider"></div>
+                <div class="continuum-step">
+                  <span class="continuum-num">02</span>
+                  <strong class="continuum-label" data-i18n="step_2_title">Multimodal Onboard Vision</strong>
+                  <p class="continuum-desc" data-i18n="step_2_desc">Instant offline screening for foliar diseases and pests directly at the crop canopy.</p>
+                </div>
+                <div class="continuum-divider"></div>
+                <div class="continuum-step">
+                  <span class="continuum-num">03</span>
+                  <strong class="continuum-label" data-i18n="step_3_title">Physical Field Action</strong>
+                  <p class="continuum-desc" data-i18n="step_3_desc">Targeted dispensing nozzles and simulated robotics navigation for localized farm interventions.</p>
+                </div>
+              </div>
+              <div class="landing-footer-line">
+                <span>PRAGYA</span>
+                <span>AUTONOMOUS AGRICULTURAL HARDWARE &amp; INTELLIGENCE</span>
+              </div>
+            </div>
+          </div>
         </section>
-        <header class="page-header">
-          <div><p class="overline" id="dateLine">Today</p><h1 id="farmName">Kisan Mitra Farm</h1><p class="farm-meta" id="farmMeta">Loading field details…</p></div>
-          <div class="health-score" aria-label="Overall field health"><span data-i18n="field_health">Field health</span><strong id="healthScore">—</strong><small>/100</small><div class="health-track" aria-hidden="true"><i id="healthBar"></i></div></div>
-        </header>
-        <article class="priority" id="priorityCard"><div class="priority-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2a1 1 0 0 1 1 1v1.1a8 8 0 1 1-6.5 2.5l-.8-.8a1 1 0 0 1 1.4-1.4l2.3 2.3a1 1 0 0 1 0 1.4l-2.3 2.3A1 1 0 1 1 5.7 9l.8-.8A6 6 0 1 0 12 6.1V7a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1h1Z"/></svg></div><div><p data-i18n="priority">Priority</p><h2 id="recommendationTitle">Reviewing the latest reading</h2><span id="recommendationMessage">Your next action will appear here.</span></div></article>
-        <div class="metric-grid" aria-label="Latest field readings">
-          <article class="metric"><div class="metric-label"><span class="metric-icon water" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2S5 10 5 15a7 7 0 0 0 14 0c0-5-7-13-7-13Zm0 17a4 4 0 0 1-4-4c0-2.3 2.4-6.2 4-8.4 1.6 2.2 4 6.1 4 8.4a4 4 0 0 1-4 4Z"/></svg></span><span data-i18n="soil_moisture">Soil moisture</span></div><strong id="moistureValue">—</strong><span class="metric-note" id="moistureNote">Optimal 45–65%</span></article>
-          <article class="metric"><div class="metric-label"><span class="metric-icon heat" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 13.8V5a5 5 0 0 0-10 0v8.8A6 6 0 1 0 15 13.8ZM10 21a4 4 0 0 1-3-6.7V5a3 3 0 0 1 6 0v9.3A4 4 0 0 1 10 21Zm1-10.8V5a1 1 0 0 0-2 0v5.2a3 3 0 1 0 2 0Z"/></svg></span><span data-i18n="temperature">Temperature</span></div><strong id="temperatureValue">—</strong><span class="metric-note" id="temperatureNote">Field sensor</span></article>
-          <article class="metric"><div class="metric-label"><span class="metric-icon air" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h10a2 2 0 1 0-2-2 1 1 0 0 1-2 0 4 4 0 1 1 4 4H4a1 1 0 0 1 0-2Zm16 4a4 4 0 0 1-4 4H4a1 1 0 0 1 0-2h12a2 2 0 1 0-2-2 1 1 0 0 1-2 0 4 4 0 0 1 8 0Z"/></svg></span><span data-i18n="humidity">Humidity</span></div><strong id="humidityValue">—</strong><span class="metric-note" id="humidityNote">Checking conditions</span></article>
-          <article class="metric"><div class="metric-label"><span class="metric-icon soil" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v2H2V6a2 2 0 0 1 2-2Zm-2 6h20v3H2v-3Zm0 5h20v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3Z"/></svg></span><span data-i18n="soil_ph">Soil pH</span></div><strong id="phValue">—</strong><span class="metric-note" data-i18n="ph_note">Optimal 6.0–7.0</span></article>
-        </div>
-        <div class="overview-grid">
-          <section class="panel health-panel" aria-labelledby="conditionsTitle"><div class="section-row"><h2 id="conditionsTitle" data-i18n="conditions">Conditions</h2><span class="updated" id="updatedAt">Waiting for data</span></div><div class="condition-list"><div><span data-i18n="soil">Soil</span><div class="bar"><i id="soilHealthBar"></i></div><b id="soilHealth">—</b></div><div><span data-i18n="water">Water</span><div class="bar"><i id="waterHealthBar"></i></div><b id="waterHealth">—</b></div><div><span data-i18n="climate">Climate</span><div class="bar"><i id="climateHealthBar"></i></div><b id="climateHealth">—</b></div><div><span data-i18n="disease_risk">Leaf health</span><div class="bar"><i id="diseaseHealthBar"></i></div><b id="diseaseHealth">—</b></div></div></section>
-          <section class="panel" aria-labelledby="noticesTitle"><div class="section-row"><h2 id="noticesTitle" data-i18n="notices">Notices</h2><span class="count" id="noticeCount">0</span></div><div class="notice-list" id="noticeList"><p class="empty">No notices yet.</p></div></section>
-          <section class="panel activity-panel" aria-labelledby="activityTitle"><div class="section-row"><h2 id="activityTitle" data-i18n="recent_activity">Recent activity</h2><span class="muted-label" id="activityCount"></span></div><div class="activity-list" id="activityList"><p class="empty" data-i18n="activity_empty">Activity appears after you run a model or scan a leaf.</p></div></section>
-          <section class="panel history-panel" aria-labelledby="historyTitle"><div class="section-row"><h2 id="historyTitle" data-i18n="history_title">Recent readings</h2><span class="muted-label" id="historyCount"></span></div><svg class="sparkline" id="sparkline" viewBox="0 0 300 120" preserveAspectRatio="none" role="img" aria-label="Recent sensor history"><line class="spark-grid" x1="0" y1="30" x2="300" y2="30"/><line class="spark-grid" x1="0" y1="60" x2="300" y2="60"/><line class="spark-grid" x1="0" y1="90" x2="300" y2="90"/><polyline class="spark-moisture" id="sparkMoisture" points=""/><polyline class="spark-temperature" id="sparkTemperature" points=""/><polyline class="spark-humidity" id="sparkHumidity" points=""/></svg><ul class="spark-legend"><li><i style="background:#336a7b"></i><span data-i18n="soil_moisture">Soil moisture</span></li><li><i style="background:#9a6412"></i><span data-i18n="temperature">Temperature</span></li><li><i style="background:#27734b"></i><span data-i18n="humidity">Humidity</span></li></ul><p class="panel-footnote" id="historyEmpty" data-i18n="history_empty">History appears after a few sensor readings are stored.</p></section>
+
+        <!-- Authenticated Overview Dashboard (Only rendered when user is authenticated) -->
+        <div class="dashboard-private overview-authenticated" id="overviewDashboardContent">
+          <header class="page-header overview-page-header">
+            <div class="overview-title-block">
+              <p class="overline overview-eyebrow" id="dateLine">FIELD INTELLIGENCE · HYDERABAD</p>
+              <h1 id="farmName" class="overview-farm-title"><span class="brand-word">PRAGYA</span> <span class="workspace-word">Farm</span></h1>
+              <p class="farm-meta" id="farmMeta">5 acres · Wheat · Hyderabad</p>
+            </div>
+            <div class="health-card" aria-label="Overall field health">
+              <span class="health-card-label" data-i18n="field_health">Field Health</span>
+              <div class="health-card-main">
+                <strong class="health-percentage" id="healthScore">—</strong>
+                <span class="health-status-badge healthy" id="healthStatusBadge">Healthy</span>
+              </div>
+              <div class="health-track" aria-hidden="true"><i id="healthBar"></i></div>
+            </div>
+          </header>
+
+          <section class="panel nutrients-panel" id="overviewNutrientsPanel" aria-labelledby="overviewSoilTitle">
+            <div class="section-row">
+              <div>
+                <h2 id="overviewSoilTitle" data-i18n="soil_nutrients">Soil nutrients</h2>
+                <p class="panel-subtitle" data-i18n="soil_nutrients_sub">Core macro-nutrients (NPK) from field sensors</p>
+              </div>
+              <span class="status-chip" id="overviewFertilityStatus">Checking</span>
+            </div>
+            <div class="npk-overview-grid">
+              <div class="npk-col" id="colNitrogen">
+                <div class="npk-col-top">
+                  <span class="npk-symbol n">N</span>
+                  <span class="npk-name" data-i18n="nitrogen">Nitrogen</span>
+                </div>
+                <strong class="npk-value" id="overviewNValue">—</strong>
+                <span class="npk-rating rating-moderate" id="nRating">Checking</span>
+                <div class="bar npk-bar"><i id="overviewNBar"></i></div>
+                <small class="npk-guide">Pref: 50–85</small>
+              </div>
+              <div class="npk-col" id="colPhosphorus">
+                <div class="npk-col-top">
+                  <span class="npk-symbol p">P</span>
+                  <span class="npk-name" data-i18n="phosphorus">Phosphorus</span>
+                </div>
+                <strong class="npk-value" id="overviewPValue">—</strong>
+                <span class="npk-rating rating-moderate" id="pRating">Checking</span>
+                <div class="bar npk-bar"><i id="overviewPBar"></i></div>
+                <small class="npk-guide">Pref: 20–50</small>
+              </div>
+              <div class="npk-col" id="colPotassium">
+                <div class="npk-col-top">
+                  <span class="npk-symbol k">K</span>
+                  <span class="npk-name" data-i18n="potassium">Potassium</span>
+                </div>
+                <strong class="npk-value" id="overviewKValue">—</strong>
+                <span class="npk-rating rating-moderate" id="kRating">Checking</span>
+                <div class="bar npk-bar"><i id="overviewKBar"></i></div>
+                <small class="npk-guide">Pref: 30–45</small>
+              </div>
+              <div class="npk-col" id="colEc">
+                <div class="npk-col-top">
+                  <span class="npk-symbol ec">EC</span>
+                  <span class="npk-name" data-i18n="ec">Electrical conductivity</span>
+                </div>
+                <strong class="npk-value" id="overviewEcValue">0.62 mS/cm</strong>
+                <span class="npk-rating rating-good" id="ecRating">Good</span>
+                <div class="bar npk-bar"><i id="overviewEcBar"></i></div>
+                <small class="npk-guide">Pref: &lt; 1.0 mS/cm</small>
+              </div>
+            </div>
+            <div class="nutrient-summary-box" id="nutrientSummaryBox">
+              <span class="nutrient-summary-label" data-i18n="soil_summary_label">Soil nutrient summary:</span>
+              <p class="nutrient-summary-text" id="nutrientSummaryText">Analyzing nutrient balance…</p>
+            </div>
+          </section>
+
+          <section class="snapshot-card" aria-label="Soil and field snapshot">
+            <div class="metric-grid" aria-label="Latest field readings">
+              <article class="metric"><div class="metric-label"><span class="metric-icon water" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2S5 10 5 15a7 7 0 0 0 14 0c0-5-7-13-7-13Zm0 17a4 4 0 0 1-4-4c0-2.3 2.4-6.2 4-8.4 1.6 2.2 4 6.1 4 8.4a4 4 0 0 1-4 4Z"/></svg></span><span data-i18n="soil_moisture">Soil moisture</span></div><strong id="moistureValue">—</strong><span class="metric-note" id="moistureNote">Optimal 45–65%</span></article>
+              <article class="metric"><div class="metric-label"><span class="metric-icon heat" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 13.8V5a5 5 0 0 0-10 0v8.8A6 6 0 1 0 15 13.8ZM10 21a4 4 0 0 1-3-6.7V5a3 3 0 0 1 6 0v9.3A4 4 0 0 1 10 21Zm1-10.8V5a1 1 0 0 0-2 0v5.2a3 3 0 1 0 2 0Z"/></svg></span><span data-i18n="temperature">Temperature</span></div><strong id="temperatureValue">—</strong><span class="metric-note" id="temperatureNote">Field sensor</span></article>
+              <article class="metric"><div class="metric-label"><span class="metric-icon air" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 8h10a2 2 0 1 0-2-2 1 1 0 0 1-2 0 4 4 0 1 1 4 4H4a1 1 0 0 1 0-2Zm16 4a4 4 0 0 1-4 4H4a1 1 0 0 1 0-2h12a2 2 0 1 0-2-2 1 1 0 0 1-2 0 4 4 0 1 8 0Z"/></svg></span><span data-i18n="humidity">Humidity</span></div><strong id="humidityValue">—</strong><span class="metric-note" id="humidityNote">Checking conditions</span></article>
+              <article class="metric"><div class="metric-label"><span class="metric-icon soil" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v2H2V6a2 2 0 0 1 2-2Zm-2 6h20v3H2v-3Zm0 5h20v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3Z"/></svg></span><span data-i18n="soil_ph">Soil pH</span></div><strong id="phValue">—</strong><span class="metric-note" id="phNote" data-i18n="ph_note">Optimal 6.0–7.0</span></article>
+            </div>
+            <div class="weather-context-bar" id="weatherContextBar">
+              <span class="weather-context-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg></span>
+              <span class="weather-context-label" data-i18n="weather_context">Weather context:</span>
+              <span class="weather-context-text" id="weatherContextText">—</span>
+            </div>
+          </section>
+
+          <section class="panel attention-panel" id="attentionPanel" aria-labelledby="attentionTitle">
+            <div class="attention-header">
+              <div class="attention-heading-wrap">
+                <span class="attention-icon" id="attentionIcon" aria-hidden="true">✓</span>
+                <h2 id="attentionTitle" data-i18n="what_needs_attention">What needs attention?</h2>
+              </div>
+              <span class="status-chip attention-chip" id="attentionChip">All healthy</span>
+            </div>
+            <div class="attention-body">
+              <p class="attention-headline" id="attentionHeadline">Your field looks healthy</p>
+              <p class="attention-detail" id="attentionDetail">No major issues detected in the current readings.</p>
+            </div>
+          </section>
+
+          <div class="overview-grid">
+            <section class="panel alerts-panel" aria-labelledby="alertsTitle">
+              <div class="section-row">
+                <h2 id="alertsTitle" data-i18n="alerts">Alerts</h2>
+                <span class="count" id="noticeCount">0</span>
+              </div>
+              <div class="notice-list" id="noticeList">
+                <div class="calm-empty-alerts" id="alertsEmptyState">
+                  <span class="calm-empty-icon">✓</span>
+                  <div>
+                    <strong data-i18n="no_active_alerts">No active alerts</strong>
+                    <p data-i18n="no_active_alerts_sub">All monitored field indicators are in normal range.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel crops-panel" aria-labelledby="cropTitle">
+              <div class="section-row">
+                <div>
+                  <h2 id="cropTitle" data-i18n="recommended_crops">Recommended Crops</h2>
+                  <p class="panel-subtitle" data-i18n="recommended_crops_sub">Based on current field conditions</p>
+                </div>
+                <span class="muted-label" data-i18n="top_three">Top 3</span>
+              </div>
+              <ol class="crop-list" id="cropList">
+                <li><span>Loading recommendations…</span></li>
+              </ol>
+              <p class="panel-footnote" data-i18n="crop_disclaimer">Use these rankings as a starting point alongside local agronomic advice.</p>
+            </section>
+          </div>
         </div>
       </section>
 
       <section class="page" id="page-field" role="tabpanel" aria-labelledby="tab-field" hidden>
         <header class="page-header compact"><div><p class="overline" data-i18n="field_tools">Field tools</p><h1 data-i18n="soil_and_leaf">Soil &amp; leaf</h1></div><p data-i18n="field_intro">Turn sensor readings and one clear leaf photo into practical guidance.</p></header>
         <div class="field-grid"><div class="field-column">
-          <section class="panel soil-panel" aria-labelledby="soilTitle"><div class="section-row"><h2 id="soilTitle" data-i18n="soil_nutrients">Soil nutrients</h2><span class="status-chip" id="fertilityStatus">Checking</span></div><div class="nutrients"><div><span><b>N</b><small data-i18n="nitrogen">Nitrogen</small></span><strong id="nValue">—</strong><div class="bar"><i id="nBar"></i></div></div><div><span><b>P</b><small data-i18n="phosphorus">Phosphorus</small></span><strong id="pValue">—</strong><div class="bar"><i id="pBar"></i></div></div><div><span><b>K</b><small data-i18n="potassium">Potassium</small></span><strong id="kValue">—</strong><div class="bar"><i id="kBar"></i></div></div></div><dl class="soil-facts"><div><dt data-i18n="ec">Electrical conductivity</dt><dd id="ecValue">—</dd></div><div><dt data-i18n="organic_carbon">Organic carbon</dt><dd id="carbonValue">—</dd></div><div><dt data-i18n="rainfall">Rainfall</dt><dd id="rainfallValue">—</dd></div></dl></section>
-          <section class="panel" aria-labelledby="cropTitle"><div class="section-row"><h2 id="cropTitle" data-i18n="crop_matches">Crop matches</h2><span class="muted-label" data-i18n="top_three">Top 3</span></div><ol class="crop-list" id="cropList"><li><span>Loading recommendations…</span></li></ol><p class="panel-footnote" data-i18n="crop_disclaimer">Use these rankings as a starting point alongside local agronomic advice.</p></section>
+          <section class="panel" aria-labelledby="fieldCropTitle"><div class="section-row"><h2 id="fieldCropTitle" data-i18n="recommended_crops">Recommended Crops</h2><span class="muted-label" data-i18n="top_three">Top 3</span></div><ol class="crop-list" id="fieldCropList"><li><span>Loading recommendations…</span></li></ol><p class="panel-footnote" data-i18n="crop_disclaimer">Use these rankings as a starting point alongside local agronomic advice.</p></section>
         </div>
           <section class="panel scanner" aria-labelledby="scannerTitle"><div class="scanner-heading"><span class="scanner-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 3h5v2H5v4H3V4a1 1 0 0 1 1-1Zm11 0h5a1 1 0 0 1 1 1v5h-2V5h-4V3Zm4 12h2v5a1 1 0 0 1-1 1h-5v-2h4v-4ZM5 15v4h4v2H4a1 1 0 0 1-1-1v-5h2Zm7-8c-3.2 2.2-4.5 4.7-4.5 7 0 2.7 2 4.5 4.5 4.5s4.5-1.8 4.5-4.5c0-2.3-1.3-4.8-4.5-7Z"/></svg></span><div><h2 id="scannerTitle" data-i18n="leaf_scanner">Disease detection</h2><p data-i18n="scanner_help">Pepper, potato, and tomato. One leaf, close up, in daylight.</p></div></div>
             <label class="upload" for="leafInput" id="dropZone"><img id="leafPreview" alt="Selected leaf preview" hidden><span class="upload-placeholder" id="uploadPlaceholder"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 16V7.8L8.4 10.4 7 9l5-5 5 5-1.4 1.4L13 7.8V16h-2Zm-5 4a3 3 0 0 1-3-3v-3h2v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3h2v3a3 3 0 0 1-3 3H6Z"/></svg><b data-i18n="choose_photo">Choose a leaf photo</b><small data-i18n="photo_types">JPG, PNG, or WEBP · up to 10 MB</small></span></label>
             <input class="visually-hidden" id="leafInput" type="file" accept="image/jpeg,image/png,image/webp"><div class="file-row" id="fileRow" hidden><span id="fileName"></span><button id="clearPhotoBtn" type="button" data-i18n="remove">Remove</button></div><button class="primary-button" id="scanBtn" type="button" disabled><span data-i18n="scan_leaf">Scan leaf</span></button>
-            <div class="scan-result" id="scanResult" role="status" aria-live="polite" hidden><div class="result-top"><span class="result-icon" id="resultIcon" aria-hidden="true"></span><div><small data-i18n="scan_result">Scan result</small><strong id="resultTitle"></strong></div><span class="confidence" id="resultConfidence"></span></div><p id="resultTreatment"></p><div class="result-actions"><button class="listen-button" id="scanListenBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h4l5 5V5L7 10H3Zm13.5 2a3.5 3.5 0 0 0-1.8-3.1v6.2A3.5 3.5 0 0 0 16.5 12ZM15 4.2v2.1a6.5 6.5 0 0 1 0 11.4v2.1a8.5 8.5 0 0 0 0-15.6Z"/></svg><span data-i18n="listen">Listen</span></button><div class="tts-langs" role="group" aria-label="Speech language"><button type="button" class="is-active" data-tts-lang="en" data-for="scan">EN</button><button type="button" data-tts-lang="hi" data-for="scan">हिंदी</button></div></div><div class="result-meta"><span id="resultSpeed"></span><span data-i18n="local_private">Processed locally · photo not stored</span></div></div>
+            <div class="scan-result" id="scanResult" role="status" aria-live="polite" hidden><div class="result-top"><span class="result-icon" id="resultIcon" aria-hidden="true"></span><div><small data-i18n="scan_result">Scan result</small><strong id="resultTitle"></strong></div><span class="confidence" id="resultConfidence"></span></div><p id="resultTreatment"></p><div class="result-actions"><button class="listen-button" id="scanListenBtn" type="button" aria-label="Listen to response" title="Listen to response"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h4l5 5V5L7 10H3Zm13.5 2a3.5 3.5 0 0 0-1.8-3.1v6.2A3.5 3.5 0 0 0 16.5 12ZM15 4.2v2.1a6.5 6.5 0 0 1 0 11.4v2.1a8.5 8.5 0 0 0 0-15.6Z"/></svg></button><div class="tts-langs" role="group" aria-label="Speech language"><button type="button" class="is-active" data-tts-lang="en" data-for="scan">EN</button><button type="button" data-tts-lang="hi" data-for="scan">हिंदी</button></div></div><div class="result-meta"><span id="resultSpeed"></span><span data-i18n="local_private">Processed locally · photo not stored</span></div></div>
           </section>
         </div>
       </section>
 
       <section class="page" id="page-models" role="tabpanel" aria-labelledby="tab-models" hidden>
-        <header class="page-header compact"><div><p class="overline" data-i18n="nav_models">AI Models</p><h1 data-i18n="models_title">Run a local model</h1></div><p data-i18n="models_intro">Choose a model, provide an image or sensor values, and hear the result.</p></header>
-        <div class="model-grid" id="modelCards"></div>
-        <section class="panel model-runner" aria-labelledby="runnerTitle">
-          <div class="section-row"><h2 id="runnerTitle" data-i18n="model_input">Model input</h2><span class="muted-label" id="selectedModelLabel"></span></div>
-          <form id="modelSensorForm" class="sensor-form" hidden>
-            <p class="panel-copy sensor-source-note" data-i18n="sensor_auto">Uses the latest Raspberry Pi sensor reading.</p>
-            <div class="form-grid" id="modelFields"></div>
-            <button class="primary-button" id="runModelBtn" type="submit"><span data-i18n="run_model">Run model</span></button>
+        <header class="page-header edge-ai-header">
+          <div class="edge-header-content">
+            <div class="edge-title-block">
+              <p class="overline edge-eyebrow"><span class="edge-tagline" data-i18n="edge_tagline">Intelligence that stays in the field.</span></p>
+              <h1 class="edge-page-title" id="edgePageTitle"><span class="brand-word">PRAGYA</span> <span class="workspace-word">EDGE AI</span></h1>
+              <p class="edge-purpose farm-meta" data-i18n="edge_purpose">Run agricultural analysis locally on the device, even when connectivity is unavailable.</p>
+            </div>
+            <div class="edge-capability-indicators" aria-label="Edge AI Capabilities">
+              <span class="capability-pill"><span class="cap-dot"></span><span data-i18n="cap_local">LOCAL PROCESSING</span></span>
+              <span class="capability-pill"><span class="cap-dot"></span><span data-i18n="cap_offline">OFFLINE CAPABLE</span></span>
+              <span class="capability-pill"><span class="cap-dot"></span><span data-i18n="cap_ondevice">ON-DEVICE MODELS</span></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="model-grid edge-model-grid" id="modelCards"></div>
+
+        <div class="edge-workflow" id="edgeWorkflow" aria-label="Edge AI Workflow">
+          <div class="workflow-step">
+            <span class="workflow-phase" data-i18n="workflow_input">INPUT</span>
+            <span class="workflow-val" id="wfInputVal">Leaf Image</span>
+          </div>
+          <span class="workflow-divider" aria-hidden="true">→</span>
+          <div class="workflow-step">
+            <span class="workflow-phase" data-i18n="workflow_model">LOCAL MODEL</span>
+            <span class="workflow-val" id="wfModelVal">Edge Model</span>
+          </div>
+          <span class="workflow-divider" aria-hidden="true">→</span>
+          <div class="workflow-step">
+            <span class="workflow-phase" data-i18n="workflow_insight">FIELD INSIGHT</span>
+            <span class="workflow-val" id="wfInsightVal">Disease Insight</span>
+          </div>
+        </div>
+
+        <section class="panel model-runner edge-runner" aria-labelledby="runnerTitle">
+          <div class="section-row"><h2 id="runnerTitle" data-i18n="run_analysis">Run analysis</h2><span class="muted-label" id="selectedModelLabel">Disease Detection selected</span></div>
+          <form id="modelSensorForm" class="sensor-form field-readings-form" hidden>
+            <div class="field-readings-header">
+              <div class="field-readings-title-row">
+                <h3 class="field-readings-title" data-i18n="field_readings_heading">FIELD READINGS</h3>
+                <span class="field-source-pill" id="fieldReadingsSource" data-i18n="live_field_readings">Live field sensors</span>
+              </div>
+              <p class="panel-copy sensor-source-note" data-i18n="field_readings_desc">Populated directly from existing field telemetry. Review or adjust values if manual testing is needed.</p>
+            </div>
+            <div class="field-readings-container" id="modelFields"></div>
+            <div class="field-submit-bar">
+              <button class="primary-button prominent-analyze-btn" id="runModelBtn" type="submit">
+                <span data-i18n="analyze_field_btn">ANALYZE FIELD</span>
+              </button>
+            </div>
           </form>
           <div id="modelImageForm" hidden>
-            <label class="upload compact-upload" for="modelLeafInput" id="modelDropZone"><img id="modelLeafPreview" alt="Selected leaf preview" hidden><span class="upload-placeholder" id="modelUploadPlaceholder"><b data-i18n="choose_photo">Choose a leaf photo</b><small data-i18n="photo_types">JPG, PNG, or WEBP · up to 10 MB</small></span></label>
+            <label class="upload compact-upload" for="modelLeafInput" id="modelDropZone"><img id="modelLeafPreview" alt="Selected leaf preview" hidden><span class="upload-placeholder" id="modelUploadPlaceholder"><b data-i18n="choose_photo">Choose a photo</b><small data-i18n="photo_types">JPG, PNG, or WEBP · up to 10 MB</small></span></label>
             <input class="visually-hidden" id="modelLeafInput" type="file" accept="image/jpeg,image/png,image/webp">
+            <div class="model-extra-inputs">
+              <input id="modelQuestionInput" class="model-question-input" type="text" maxlength="300" placeholder="Optional question (e.g. What pest is this?)" data-i18n-placeholder="model_question_placeholder">
+            </div>
             <button class="secondary-button" id="clearModelPhotoBtn" type="button" data-i18n="remove" hidden>Remove</button>
-            <button class="primary-button" id="runImageModelBtn" type="button" disabled><span data-i18n="scan_leaf">Scan leaf</span></button>
+            <button class="primary-button" id="runImageModelBtn" type="button" disabled><span data-i18n="analyze_btn">Analyze</span></button>
           </div>
           <p class="form-status" id="modelRunStatus" role="status" aria-live="polite"></p>
           <div class="scan-result" id="modelResult" hidden>
-            <div class="result-top"><span class="result-icon" id="modelResultIcon" aria-hidden="true"></span><div><small data-i18n="model_result">Model result</small><strong id="modelResultTitle"></strong></div><span class="confidence" id="modelResultConfidence"></span></div>
-            <p id="modelResultBody"></p>
+            <div class="result-mode-header" id="modelModeHeader">
+              <span class="status-chip" id="modelModeBadge">Cloud AI • Online</span>
+              <span class="model-active-name" id="modelActiveName"></span>
+            </div>
+            <div class="result-top" id="modelResultTop"><span class="result-icon" id="modelResultIcon" aria-hidden="true"></span><div><small id="modelResultTypeLabel" data-i18n="model_result">Model result</small><strong id="modelResultTitle"></strong></div><span class="confidence" id="modelResultConfidence"></span></div>
+            <div class="result-body-wrap" id="modelResultBodyWrap"><p id="modelResultBody"></p></div>
+            <div id="modelStructuredReport" class="structured-report-container" hidden></div>
             <canvas id="modelDetectionOverlay" class="detection-overlay" role="img" aria-label="Pest detections on the uploaded photo" hidden></canvas>
-            <div class="result-actions"><button class="listen-button" id="modelListenBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h4l5 5V5L7 10H3Zm13.5 2a3.5 3.5 0 0 0-1.8-3.1v6.2A3.5 3.5 0 0 0 16.5 12ZM15 4.2v2.1a6.5 6.5 0 0 1 0 11.4v2.1a8.5 8.5 0 0 0 0-15.6Z"/></svg><span data-i18n="listen">Listen</span></button><div class="tts-langs" role="group"><button type="button" class="is-active" data-tts-lang="en" data-for="model">EN</button><button type="button" data-tts-lang="hi" data-for="model">हिंदी</button></div></div>
+            <div class="result-actions"><button class="listen-button" id="modelListenBtn" type="button" aria-label="Listen to response" title="Listen to response"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h4l5 5V5L7 10H3Zm13.5 2a3.5 3.5 0 0 0-1.8-3.1v6.2A3.5 3.5 0 0 0 16.5 12ZM15 4.2v2.1a6.5 6.5 0 0 1 0 11.4v2.1a8.5 8.5 0 0 0 0-15.6Z"/></svg></button><div class="tts-langs" role="group"><button type="button" class="is-active" data-tts-lang="en" data-for="model">EN</button><button type="button" data-tts-lang="hi" data-for="model">हिंदी</button></div></div>
           </div>
         </section>
       </section>
 
       <section class="page" id="page-history" role="tabpanel" aria-labelledby="tab-history" hidden>
-        <header class="page-header compact"><div><p class="overline" data-i18n="nav_history">History</p><h1 data-i18n="analyses_title">Saved analyses</h1></div><p data-i18n="analyses_intro">Open saved pest, leaf, crop, and soil results from this device.</p></header>
-        <div class="history-layout">
-          <section class="panel" aria-labelledby="analysesListTitle"><div class="section-row"><h2 id="analysesListTitle" data-i18n="past_analyses">Past analyses</h2><span class="muted-label" id="analysesCount"></span></div><div class="analysis-list" id="analysisList"><p class="empty" data-i18n="analyses_empty">Run a model to start saving history.</p></div></section>
-          <section class="panel" aria-labelledby="analysisDetailTitle"><div class="section-row"><h2 id="analysisDetailTitle" data-i18n="analysis_detail">Result</h2></div><div id="analysisDetail"><p class="empty" data-i18n="select_analysis">Select an analysis to view it.</p></div></section>
+        <header class="page-header compact history-page-header">
+          <div class="history-header-main">
+            <p class="overline" data-i18n="history_overline">HISTORY</p>
+            <div class="history-title-row">
+              <h1 class="history-main-title" data-i18n="history_archive_title">Field intelligence history</h1>
+              <span class="history-total-pill" id="historyTotalCount">0 analyses</span>
+            </div>
+          </div>
+          <p class="history-support-text" data-i18n="history_archive_subtitle">Review saved disease, pest, field, crop and soil analyses from this device.</p>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="history-search-bar">
+          <div class="history-search-input-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" id="historySearchInput" class="history-search-input" placeholder="Search pest, disease, crop, field or analysis..." data-i18n-placeholder="history_search_placeholder">
+            <button type="button" id="historySearchClear" class="search-clear-btn" aria-label="Clear search" title="Clear search" hidden>×</button>
+          </div>
+        </div>
+
+        <!-- Filter Toolbar -->
+        <div class="history-controls-toolbar">
+          <div class="history-type-filters" role="group" aria-label="Filter by type">
+            <button type="button" class="history-filter-btn is-active" data-history-type="all" data-i18n="all_types">All</button>
+            <button type="button" class="history-filter-btn" data-history-type="disease" data-i18n="filter_disease">Disease</button>
+            <button type="button" class="history-filter-btn" data-history-type="pest" data-i18n="filter_pest">Pest</button>
+            <button type="button" class="history-filter-btn" data-history-type="field_intelligence" data-i18n="filter_field_intel">Field Intelligence</button>
+            <button type="button" class="history-filter-btn" data-history-type="crop" data-i18n="filter_crop">Crop</button>
+          </div>
+          <div class="history-secondary-filters">
+            <div class="history-select-wrap">
+              <label for="historyDateFilter" class="visually-hidden">Filter by date</label>
+              <select id="historyDateFilter" class="history-select">
+                <option value="all" data-i18n="filter_all_time">All time</option>
+                <option value="today" data-i18n="filter_today">Today</option>
+                <option value="week" data-i18n="filter_last_7_days">Last 7 days</option>
+                <option value="month" data-i18n="filter_last_30_days">Last 30 days</option>
+              </select>
+            </div>
+            <div class="history-select-wrap">
+              <label for="historySortSelect" class="visually-hidden">Sort order</label>
+              <select id="historySortSelect" class="history-select">
+                <option value="newest" data-i18n="sort_newest">Newest first</option>
+                <option value="oldest" data-i18n="sort_oldest">Oldest first</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary Strip -->
+        <div class="history-summary-strip" id="historySummaryStrip">
+          <span class="summary-pill"><strong id="summaryTotal">0</strong> <span data-i18n="summary_total_label">Total</span></span>
+          <span class="summary-divider" aria-hidden="true">•</span>
+          <span class="summary-pill"><strong id="summaryPest">0</strong> <span data-i18n="summary_pest_label">Pest</span></span>
+          <span class="summary-divider" aria-hidden="true">•</span>
+          <span class="summary-pill"><strong id="summaryDisease">0</strong> <span data-i18n="summary_disease_label">Disease</span></span>
+          <span class="summary-divider" aria-hidden="true">•</span>
+          <span class="summary-pill"><strong id="summaryField">0</strong> <span data-i18n="summary_field_label">Field</span></span>
+          <span class="summary-divider" aria-hidden="true">•</span>
+          <span class="summary-pill"><strong id="summaryCrop">0</strong> <span data-i18n="summary_crop_label">Crop</span></span>
+        </div>
+
+        <div class="history-library-container">
+          <!-- Compact History Records List (5 per page) & Pagination -->
+          <section class="panel history-list-panel" aria-labelledby="analysesListTitle">
+            <div class="section-row">
+              <h2 id="analysesListTitle" data-i18n="past_analyses">Analysis records</h2>
+              <span class="muted-label" id="analysesCount"></span>
+            </div>
+            <div class="analysis-list history-cards-list" id="analysisList">
+              <p class="empty" data-i18n="analyses_empty">No matching analysis records found.</p>
+            </div>
+            <!-- Pagination Controls -->
+            <nav class="history-pagination" id="historyPagination" aria-label="History records pagination" hidden>
+              <button type="button" class="page-nav-btn" id="historyPrevBtn" disabled data-i18n="page_prev">← Previous</button>
+              <div class="page-numbers-wrap" id="historyPageNumbers"></div>
+              <button type="button" class="page-nav-btn" id="historyNextBtn" disabled data-i18n="page_next">Next →</button>
+            </nav>
+          </section>
+        </div>
+
+        <!-- History Analysis Modal Overlay -->
+        <div class="history-modal-overlay" id="historyModalOverlay" role="dialog" aria-modal="true" aria-labelledby="historyModalTitle" hidden>
+          <div class="history-modal-backdrop" id="historyModalBackdrop"></div>
+          <div class="history-modal-container" id="historyModalContainer" tabindex="-1">
+            <!-- Modal Header (Sticky) -->
+            <header class="history-modal-header" id="historyModalHeader">
+              <div class="history-modal-header-info">
+                <div class="modal-type-mode-row">
+                  <span class="modal-type-tag" id="historyModalType">ANALYSIS</span>
+                  <span class="history-mode-pill edge" id="historyModalMode">EDGE AI</span>
+                </div>
+                <h2 class="history-modal-title" id="historyModalTitle">Analysis Title</h2>
+                <div class="history-modal-meta" id="historyModalMeta">Date · Location</div>
+              </div>
+              <div class="history-modal-header-actions">
+                <button type="button" class="listen-button" id="historyModalListenBtn" aria-label="Listen to response" title="Listen to response">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h4l5 5V5L7 10H3Zm13.5 2a3.5 3.5 0 0 0-1.8-3.1v6.2A3.5 3.5 0 0 0 16.5 12ZM15 4.2v2.1a6.5 6.5 0 0 1 0 11.4v2.1a8.5 8.5 0 0 0 0-15.6Z"/></svg>
+                </button>
+                <button type="button" class="modal-close-btn" id="historyModalCloseBtn" aria-label="Close modal" title="Close modal">×</button>
+              </div>
+            </header>
+
+            <!-- Modal Navigation Bar -->
+            <nav class="history-modal-nav" id="historyModalNav" aria-label="Analysis record navigation">
+              <span class="modal-nav-position" id="historyModalNavPos">Record 1 of 5</span>
+              <div class="modal-nav-buttons">
+                <button type="button" class="modal-nav-btn" id="historyModalPrevBtn" aria-label="Previous record">← Previous</button>
+                <button type="button" class="modal-nav-btn" id="historyModalNextBtn" aria-label="Next record">Next →</button>
+              </div>
+            </nav>
+
+            <!-- Modal Scrollable Content Body -->
+            <div class="history-modal-body" id="analysisDetail">
+              <!-- Dynamically populated structured analysis content -->
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="page" id="page-chat" role="tabpanel" aria-labelledby="tab-chat" hidden>
-        <header class="page-header compact"><div><p class="overline" data-i18n="nav_chat">Chatbot</p><h1 data-i18n="chat_title">Ask Kisan Mitra</h1></div><p data-i18n="chat_intro">Ask about farm data or attach a photo for local model analysis.</p></header>
+        <header class="page-header compact chat-page-header">
+          <div class="chat-title-block">
+            <p class="overline chat-eyebrow" id="chatEyebrow" data-i18n="chat_eyebrow">FIELD INTELLIGENCE · ADVISORY</p>
+            <h1 class="chat-page-title" id="chatTitle"><span class="workspace-word">Ask</span> <span class="brand-word">PRAGYA</span></h1>
+            <p class="farm-meta chat-meta" id="chatMeta" data-i18n="chat_subtitle">Agronomic guidance &amp; sensor-aware farm intelligence</p>
+          </div>
+          <div class="chat-header-actions" role="toolbar" aria-label="Chat controls">
+            <button type="button" class="chat-action-btn" id="newChatBtn" aria-label="New chat" title="New chat" data-i18n-title="chat_new">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 5v14M5 12h14"/>
+              </svg>
+              <span data-i18n="chat_new">New Chat</span>
+            </button>
+            <button type="button" class="chat-action-btn danger" id="clearChatBtn" aria-label="Clear chat" title="Clear chat" data-i18n-title="chat_clear">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M10 11v6M14 11v6"/>
+              </svg>
+              <span data-i18n="chat_clear">Clear Chat</span>
+            </button>
+          </div>
+        </header>
         <section class="panel chat-panel">
-          <div class="chat-log" id="chatLog" aria-live="polite"><p class="empty" data-i18n="chat_empty">Ask about your sensors, soil, crops, or leaf scans.</p></div>
-          <div class="chat-attachment" id="chatAttachment" hidden><img id="chatPreview" alt="Selected image"><span id="chatFileName"></span><label for="chatRoute" class="visually-hidden" data-i18n="chat_route">Image analysis route</label><select id="chatRoute"><option value="auto" data-i18n="chat_auto">Auto route</option><option value="disease" data-i18n="disease_model_card">Leaf disease detection</option><option value="pest" data-i18n="pest_model">Pest screening</option></select><button type="button" class="secondary-button" id="chatRemoveImage" data-i18n="remove">Remove</button></div>
-          <form id="chatForm" class="chat-form"><label class="chat-attach-button" for="chatImage" data-i18n="chat_attach">Attach image</label><input id="chatImage" class="visually-hidden" type="file" accept="image/jpeg,image/png,image/webp"><label class="visually-hidden" for="chatInput" data-i18n="chat_message">Message</label><input id="chatInput" maxlength="1200" data-i18n-placeholder="chat_placeholder" placeholder="Ask a farm question…"><button class="primary-button" type="submit" data-i18n="send">Send</button></form>
+          <div class="chat-log" id="chatLog" aria-live="polite">
+            <div class="chat-welcome-container" id="chatEmptyState">
+              <div class="chat-welcome-header">
+                <div class="chat-bot-avatar">🌱</div>
+                <h2 class="chat-welcome-title" data-i18n="chat_welcome_title">How can I help with your farm?</h2>
+                <p class="chat-welcome-subtitle" data-i18n="chat_welcome_subtitle">Ask about soil, crops, pests, diseases, or your field data.</p>
+              </div>
+
+              <div class="field-today-card" id="chatFieldToday">
+                <div class="field-today-header">
+                  <span class="field-today-label" data-i18n="field_today_title">Your field today</span>
+                  <span class="field-today-source" id="chatFieldSource"></span>
+                </div>
+                <div class="field-today-metrics" id="chatFieldMetrics">
+                  <div class="field-metric-pill pill-moisture">
+                    <span class="metric-icon">💧</span>
+                    <span class="metric-name" data-i18n="soil_moisture">Soil moisture</span>
+                    <strong class="metric-val" id="chatMoistureVal">—</strong>
+                  </div>
+                  <div class="field-metric-pill pill-temp">
+                    <span class="metric-icon">🌡️</span>
+                    <span class="metric-name" data-i18n="temperature">Temperature</span>
+                    <strong class="metric-val" id="chatTempVal">—</strong>
+                  </div>
+                  <div class="field-metric-pill pill-npk">
+                    <span class="metric-icon">🧪</span>
+                    <span class="metric-name">NPK</span>
+                    <strong class="metric-val" id="chatNpkVal">—</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat-suggestions-box">
+                <span class="chat-suggestions-title" data-i18n="you_could_ask">You could ask</span>
+                <div class="chat-chips-grid">
+                  <button type="button" class="suggestion-chip chip-soil" data-question="Is my soil okay?">
+                    <span class="chip-icon">🌱</span>
+                    <span class="chip-text" data-i18n="chip_soil">Is my soil okay?</span>
+                  </button>
+                  <button type="button" class="suggestion-chip chip-npk" data-question="Explain my NPK">
+                    <span class="chip-icon">🧪</span>
+                    <span class="chip-text" data-i18n="chip_npk">Explain my NPK</span>
+                  </button>
+                  <button type="button" class="suggestion-chip chip-today" data-question="What should I do today?">
+                    <span class="chip-icon">☀️</span>
+                    <span class="chip-text" data-i18n="chip_today">What should I do today?</span>
+                  </button>
+                  <button type="button" class="suggestion-chip chip-crop" data-question="Check my crop">
+                    <span class="chip-icon">🌾</span>
+                    <span class="chip-text" data-i18n="chip_crop">Check my crop</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-attachment-bar" id="chatAttachment" hidden>
+            <div class="attachment-preview-box">
+              <img id="chatPreview" alt="Selected image">
+              <div class="attachment-info">
+                <span class="attachment-tag" data-i18n="image_attached">Image attached</span>
+                <span class="attachment-filename" id="chatFileName"></span>
+              </div>
+            </div>
+            <div class="image-quick-actions" id="imageQuickActions">
+              <button type="button" class="image-quick-chip" data-question="What is wrong with this?">
+                <span data-i18n="chip_img_wrong">What is wrong with this?</span>
+              </button>
+              <button type="button" class="image-quick-chip" data-question="Is this a disease?">
+                <span data-i18n="chip_img_disease">Is this a disease?</span>
+              </button>
+              <button type="button" class="image-quick-chip" data-question="Is this a pest?">
+                <span data-i18n="chip_img_pest">Is this a pest?</span>
+              </button>
+            </div>
+            <button type="button" class="attachment-close-btn" id="chatRemoveImage" aria-label="Remove image" title="Remove image">×</button>
+            <label for="chatRoute" class="visually-hidden" data-i18n="chat_route">Image analysis route</label>
+            <select id="chatRoute" class="visually-hidden">
+              <option value="auto" data-i18n="chat_auto">Auto route</option>
+              <option value="disease" data-i18n="disease_model_card">Leaf disease detection</option>
+              <option value="pest" data-i18n="pest_model">Pest screening</option>
+            </select>
+          </div>
+
+          <form id="chatForm" class="chat-composer-form">
+            <div class="chat-composer-box">
+              <label class="chat-attach-icon-btn" for="chatImage" aria-label="Attach image" title="Attach image" data-i18n-title="attach_image">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+                </svg>
+              </label>
+              <input id="chatImage" class="visually-hidden" type="file" accept="image/jpeg,image/png,image/webp">
+              <label class="visually-hidden" for="chatInput" data-i18n="chat_message">Message</label>
+              <textarea id="chatInput" rows="1" maxlength="1200" data-i18n-placeholder="chat_placeholder" placeholder="Ask a farm question…"></textarea>
+              <button class="chat-send-btn" id="chatSendBtn" type="submit" disabled aria-label="Send message" title="Send message" data-i18n-title="send_message">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 19C4 13.5 7.5 9 14.5 9V5L21 11.5L14.5 18V14C9.5 14 6.5 15.8 4 19Z"/>
+                </svg>
+              </button>
+            </div>
+          </form>
           <p class="form-status" id="chatStatus" role="status" aria-live="polite"></p>
         </section>
       </section>
 
       <section class="page" id="page-rover" role="tabpanel" aria-labelledby="tab-rover" hidden>
-        <header class="page-header compact"><div><p class="overline" data-i18n="nav_rover">Rover</p><h1 data-i18n="rover_title">Field rover</h1></div><p data-i18n="rover_intro">Monitor the rover and prepare field commands. Hardware control will connect when the rover protocol is available.</p></header>
+        <header class="page-header compact rover-page-header">
+          <div class="rover-header-content">
+            <p class="overline rover-eyebrow" data-i18n="nav_rover">ROVER</p>
+            <h1 class="rover-title" data-i18n="rover_title">Field rover</h1>
+            <p class="farm-meta rover-subtitle" data-i18n="rover_intro">Monitor real-time rover telemetry, camera navigation, and precision field operations.</p>
+          </div>
+        </header>
+
         <div class="rover-grid">
-          <section class="panel rover-visual"><div class="rover-placeholder"><svg viewBox="0 0 120 72" aria-hidden="true"><path d="M25 22h70l12 27H13l12-27Zm10 8-5 11h60l-5-11H35Z"/><circle cx="30" cy="55" r="12"/><circle cx="90" cy="55" r="12"/></svg><b data-i18n="rover_image_pending">Rover image coming soon</b></div></section>
-          <section class="panel"><div class="section-row"><h2 data-i18n="rover_controls">Movement controls</h2><span class="status-chip" data-i18n="protocol_pending">Protocol pending</span></div><div class="rover-pad"><button type="button" data-rover-command="forward">↑</button><button type="button" data-rover-command="left">←</button><button type="button" data-rover-command="stop">■</button><button type="button" data-rover-command="right">→</button><button type="button" data-rover-command="backward">↓</button></div><p class="panel-footnote" data-i18n="rover_safe">Controls are simulated and do not transmit commands.</p></section>
-          <section class="panel rover-log-panel"><div class="section-row"><h2 data-i18n="rover_log">Prototype activity</h2><span class="muted-label" id="roverPosition">A1</span></div><div id="roverLog" class="activity-list"><p class="empty" data-i18n="rover_empty">Use a control to preview the command log.</p></div></section>
+          <!-- LEFT / LARGER COLUMN: Live Camera Card -->
+          <section class="panel rover-camera-panel" aria-labelledby="roverCameraTitle">
+            <div class="section-row rover-card-header rover-camera-header">
+              <div class="rover-card-header-left">
+                <div class="rover-card-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                    <circle cx="12" cy="13" r="4"/>
+                  </svg>
+                </div>
+                <div>
+                  <h2 id="roverCameraTitle" class="rover-card-title" data-i18n="rover_camera">Live camera</h2>
+                  <p class="rover-card-sub">Rover navigation &amp; field view</p>
+                </div>
+              </div>
+              <div class="rover-camera-badge-wrap">
+                <span class="status-chip rover-camera-chip is-live" id="roverCameraStatus">
+                  <span class="status-dot"></span>
+                  <span id="roverCameraStatusText">LIVE</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Main camera viewport -->
+            <div class="rover-camera-stage" id="roverCameraStage">
+              <button type="button" class="rover-camera-expand-btn" id="roverCameraExpandBtn" aria-label="Toggle fullscreen" title="Fullscreen">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                </svg>
+              </button>
+              <img id="roverCameraStream" class="rover-camera-feed" alt="Rover live camera stream" hidden>
+              <div class="rover-camera-offline rover-camera-placeholder" id="roverCameraOffline">
+                <div class="rover-camera-center-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                    <circle cx="12" cy="13" r="4"/>
+                  </svg>
+                </div>
+                <h3 class="rover-cam-feed-title">Live camera feed</h3>
+                <p class="rover-cam-feed-desc">Camera stream will appear here</p>
+              </div>
+            </div>
+
+            <!-- Compact telemetry placeholders -->
+            <div class="rover-camera-telemetry">
+              <div class="rover-tel-item"><span class="tel-label">Resolution</span><strong class="tel-val" id="roverTelResolution">1080p</strong></div>
+              <div class="rover-tel-item"><span class="tel-label">Stream</span><strong class="tel-val" id="roverTelStream">Primary</strong></div>
+              <div class="rover-tel-item"><span class="tel-label">FPS</span><strong class="tel-val" id="roverTelFps">30 fps</strong></div>
+              <div class="rover-tel-item"><span class="tel-label">Latency</span><strong class="tel-val" id="roverTelLatency">&lt; 45 ms</strong></div>
+            </div>
+          </section>
+
+          <!-- RIGHT / NARROWER COLUMN: Movement Controls Card + Field Actions Card -->
+          <div class="rover-right-stack">
+            <!-- 2. Movement Controls Card -->
+            <section class="panel rover-controls-panel" aria-labelledby="roverControlsTitle">
+              <div class="section-row rover-card-header">
+                <div class="rover-card-header-left">
+                  <div class="rover-card-icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="6" width="20" height="12" rx="4"/>
+                      <circle cx="8" cy="12" r="1.5"/>
+                      <circle cx="16" cy="12" r="1.5"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 id="roverControlsTitle" class="rover-card-title" data-i18n="rover_controls">Movement controls</h2>
+                    <p class="rover-card-sub">Drive the rover manually</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rover-pad" aria-label="Rover movement D-pad">
+                <button type="button" data-rover-command="forward" class="rover-pad-btn" aria-label="Forward">↑</button>
+                <button type="button" data-rover-command="left" class="rover-pad-btn" aria-label="Left">←</button>
+                <button type="button" data-rover-command="stop" class="rover-pad-btn rover-stop-btn" aria-label="Stop">■</button>
+                <button type="button" data-rover-command="right" class="rover-pad-btn" aria-label="Right">→</button>
+                <button type="button" data-rover-command="backward" class="rover-pad-btn" aria-label="Backward">↓</button>
+              </div>
+            </section>
+
+            <!-- 3. Field Actions Card (Directly underneath Movement Controls) -->
+            <section class="panel rover-field-actions" aria-labelledby="roverFieldActionsTitle">
+              <div class="section-row rover-card-header">
+                <div class="rover-card-header-left">
+                  <div class="rover-card-icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="3"/>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h2 id="roverFieldActionsTitle" class="rover-card-title" data-i18n="field_actions">Field actions</h2>
+                    <p class="rover-card-sub">Control field mechanisms</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rover-action-items">
+                <!-- A. NPK Sensor -->
+                <div class="rover-action-row" id="fieldActionNpk">
+                  <div class="rover-action-icon-cell icon-npk" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2v8"/>
+                      <path d="m4.93 10.93 1.41 1.41"/>
+                      <path d="M2 18h20"/>
+                      <path d="M20 22H4"/>
+                      <circle cx="12" cy="14" r="4"/>
+                    </svg>
+                  </div>
+                  <div class="rover-action-info">
+                    <span class="rover-action-label">NPK Sensor</span>
+                    <span class="rover-action-desc">Deploy / retract NPK sensor servo</span>
+                  </div>
+                  <button type="button" class="rover-action-btn rover-btn-npk" id="roverNpkSensorBtn" data-rover-command="npk_sensor">NPK Sensor</button>
+                </div>
+
+                <!-- B. Seeder -->
+                <div class="rover-action-row" id="fieldActionSeeder">
+                  <div class="rover-action-icon-cell icon-seeder" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>
+                    </svg>
+                  </div>
+                  <div class="rover-action-info">
+                    <span class="rover-action-label">Seeder</span>
+                    <span class="rover-action-desc">Seed dispensing mechanism</span>
+                  </div>
+                  <button type="button" class="rover-action-btn rover-btn-seeder" id="roverSeederBtn">Seeder</button>
+                </div>
+
+                <!-- C. Pesticide Spray -->
+                <div class="rover-action-row" id="fieldActionPesticide">
+                  <div class="rover-action-icon-cell icon-pesticide" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M10 2v4M14 2v4M8 6h8M6 10h12l-1 11H7L6 10zM12 14v4M10 16h4"/>
+                    </svg>
+                  </div>
+                  <div class="rover-action-info">
+                    <span class="rover-action-label">Pesticide Spray</span>
+                    <span class="rover-action-desc">Precision field spraying system</span>
+                  </div>
+                  <button type="button" class="rover-action-btn rover-btn-pesticide" id="roverPesticideSprayBtn">Pesticide Spray</button>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- FULL WIDTH BELOW: 4. Prototype Activity Card -->
+          <section class="panel rover-log-panel" aria-labelledby="roverLogTitle">
+            <div class="section-row rover-card-header">
+              <div class="rover-card-header-left">
+                <div class="rover-card-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10 9 9 9 8 9"/>
+                  </svg>
+                </div>
+                <div>
+                  <h2 id="roverLogTitle" class="rover-card-title" data-i18n="rover_log">Prototype activity</h2>
+                  <p class="rover-card-sub">Live command log and system status</p>
+                </div>
+              </div>
+              <span class="rover-coord-badge" id="roverPosition">A1</span>
+            </div>
+
+            <div id="roverLog" class="activity-list rover-log-list">
+              <div class="rover-empty-state empty">
+                <div class="rover-empty-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="4 17 10 11 4 5"/>
+                    <line x1="12" y1="19" x2="20" y2="19"/>
+                  </svg>
+                </div>
+                <strong class="rover-empty-title">No recent commands</strong>
+                <p class="rover-empty-desc" data-i18n="rover_empty">Use the controls to preview the command log.</p>
+              </div>
+            </div>
+          </section>
         </div>
+      </section>
+
+      <section class="page" id="page-mapping" role="tabpanel" aria-labelledby="tab-mapping" hidden>
+        <header class="page-header compact mapping-page-header">
+          <div class="mapping-header-content">
+            <p class="overline mapping-eyebrow" data-i18n="mapping_eyebrow">FIELD INTELLIGENCE</p>
+            <h1 class="mapping-title" data-i18n="mapping_title">Field mapping</h1>
+            <p class="farm-meta mapping-subtitle" data-i18n="mapping_intro">Build a spatial model of your field for sensing, scouting and rover operations.</p>
+          </div>
+        </header>
+
+        <div class="mapping-grid">
+          <!-- LEFT COLUMN: Field Setup & Zones -->
+          <div class="mapping-left-stack">
+            <!-- 1. Field Setup Panel -->
+            <section class="panel mapping-setup-panel" aria-labelledby="fieldDetailsTitle">
+              <div class="section-row mapping-card-header">
+                <div>
+                  <h2 id="fieldDetailsTitle" class="mapping-card-title" data-i18n="field_details">Field details</h2>
+                  <p class="mapping-card-sub" data-i18n="field_details_sub">Configure spatial bounds and agronomic parameters</p>
+                </div>
+                <span class="status-chip neutral" id="fieldGeometryChip">Dimensions</span>
+              </div>
+
+              <form id="fieldSetupForm" novalidate>
+                <div class="field-input-group">
+                  <label for="mapFieldName" data-i18n="field_name">Field name</label>
+                  <input id="mapFieldName" type="text" maxlength="120" placeholder="e.g. North Wheat Field" required>
+                </div>
+
+                <div class="field-input-row two-col">
+                  <div class="field-input-group flex-1">
+                    <label for="mapFieldLocation" data-i18n="field_location">Location</label>
+                    <input id="mapFieldLocation" type="text" maxlength="200" placeholder="e.g. Hyderabad, Telangana">
+                  </div>
+                  <div class="field-input-group flex-1">
+                    <label for="mapFieldCrop" data-i18n="crop">Crop</label>
+                    <input id="mapFieldCrop" type="text" maxlength="120" placeholder="e.g. Wheat" required>
+                  </div>
+                </div>
+
+                <!-- Geometry Mode Selection -->
+                <div class="field-input-group">
+                  <label data-i18n="geometry_mode">Field geometry mode</label>
+                  <div class="geometry-mode-selector" role="radiogroup" aria-label="Field geometry mode">
+                    <button type="button" class="geom-mode-btn is-active" id="geomModeDimensionsBtn" data-mode="dimensions">
+                      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
+                      <span>Enter dimensions</span>
+                    </button>
+                    <button type="button" class="geom-mode-btn" id="geomModePolygonBtn" data-mode="polygon">
+                      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 22 8.5 18 20 6 20 2 8.5"/></svg>
+                      <span>Draw boundary</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Dimensions Mode Fields -->
+                <div id="dimensionsModeGroup" class="geom-fields-group">
+                  <div class="field-input-row three-col">
+                    <div class="field-input-group flex-1">
+                      <label for="mapFieldLength" data-i18n="length">Length</label>
+                      <input id="mapFieldLength" type="number" step="0.1" min="1" placeholder="200">
+                    </div>
+                    <div class="field-input-group flex-1">
+                      <label for="mapFieldWidth" data-i18n="width">Width</label>
+                      <input id="mapFieldWidth" type="number" step="0.1" min="1" placeholder="100">
+                    </div>
+                    <div class="field-input-group unit-selector-group flex-1">
+                      <label for="mapDimensionUnit" data-i18n="dim_unit">Units</label>
+                      <select id="mapDimensionUnit">
+                        <option value="metres" selected>metres (m)</option>
+                        <option value="feet">feet (ft)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="field-input-row two-col">
+                    <div class="field-input-group flex-2">
+                      <label for="mapFieldArea" data-i18n="area">Calculated area</label>
+                      <input id="mapFieldArea" type="number" step="0.01" min="0.01" placeholder="5.0">
+                    </div>
+                    <div class="field-input-group unit-selector-group flex-1">
+                      <label for="mapAreaUnit" data-i18n="area_unit">Area unit</label>
+                      <select id="mapAreaUnit">
+                        <option value="acres" selected>acres</option>
+                        <option value="hectares">hectares (ha)</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Polygon Mode Guidance & Controls -->
+                <div id="polygonModeGroup" class="geom-fields-group" hidden>
+                  <div class="polygon-workflow-card">
+                    <p class="polygon-instruction">
+                      Click map to add boundary corners. Drag vertices to adjust. The polygon serves as authoritative field geometry.
+                    </p>
+                    <div class="polygon-actions-bar">
+                      <button type="button" class="secondary-button small-btn" id="mapDrawToggleBtn">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                        <span id="drawToggleText">Add points</span>
+                      </button>
+                      <button type="button" class="secondary-button small-btn" id="mapClosePolyBtn">Close polygon</button>
+                      <button type="button" class="secondary-button small-btn danger-text" id="mapClearPolyBtn">Clear</button>
+                    </div>
+                    <div class="polygon-meta-line">
+                      <span id="polyPointCount">4 vertices defined</span>
+                      <span class="poly-badge authoritative">Authoritative</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field-form-footer">
+                  <button type="submit" class="primary-button" id="saveFieldBtn" data-i18n="save_field">Save field</button>
+                  <button type="button" class="secondary-button" id="resetFieldBtn" data-i18n="reset">Reset</button>
+                </div>
+                <p class="form-status" id="fieldSaveStatus" role="status" aria-live="polite"></p>
+              </form>
+            </section>
+
+            <!-- 2. Field Zones Panel (Automated Equal-Area Partitions) -->
+            <section class="panel mapping-zones-panel" aria-labelledby="fieldZonesTitle">
+              <div class="section-row mapping-card-header">
+                <div>
+                  <h2 id="fieldZonesTitle" class="mapping-card-title" data-i18n="field_zones">Field zones</h2>
+                  <p class="mapping-card-sub">Automatic equal-area spatial grid partitions</p>
+                </div>
+                <span class="status-chip neutral" id="zoneCountChip">2 zones</span>
+              </div>
+
+              <div class="zones-list" id="fieldZonesList">
+                <!-- Zone items rendered dynamically with automatic naming & area -->
+              </div>
+
+              <div class="zone-actions-bar">
+                <button type="button" class="secondary-button add-zone-btn" id="addZoneBtn">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                  <span>+ Add zone</span>
+                </button>
+              </div>
+            </section>
+          </div>
+
+          <!-- RIGHT COLUMN: Large Field Map & Compact Summary -->
+          <div class="mapping-right-stack">
+            <!-- Main Map Canvas Stage (Primary Focus) -->
+            <section class="panel mapping-stage-panel" aria-labelledby="mapWorkspaceTitle">
+              <div class="section-row map-stage-header">
+                <div class="map-header-left">
+                  <h2 id="mapWorkspaceTitle" class="mapping-card-title sr-only">Field Map Workspace</h2>
+                  <div class="map-provider-chip" id="mapProviderChip">
+                    <span class="status-dot"></span>
+                    <span id="mapProviderLabel">Offline Vector Grid · Ready for Tile Provider</span>
+                  </div>
+                </div>
+
+                <div class="map-toolbar-actions">
+                  <button type="button" class="map-tool-btn is-active" id="mapLayerToggleBtn" title="Toggle satellite / base layer">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    <span id="mapLayerToggleText">Grid View</span>
+                  </button>
+                  <button type="button" class="map-tool-btn" id="mapFitBtn" title="Fit to field geometry">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                    <span>Fit</span>
+                  </button>
+                  <div class="map-zoom-group">
+                    <button type="button" class="map-tool-btn zoom-btn" id="mapZoomInBtn" title="Zoom in" aria-label="Zoom in">+</button>
+                    <button type="button" class="map-tool-btn zoom-btn" id="mapZoomOutBtn" title="Zoom out" aria-label="Zoom out">−</button>
+                  </div>
+                  <button type="button" class="map-tool-btn" id="mapResetViewBtn" title="Reset view">Reset</button>
+                </div>
+              </div>
+
+              <!-- Interactive Field Map Stage -->
+              <div class="mapping-canvas-stage" id="mappingCanvasStage">
+                <svg id="fieldMapSvg" class="field-map-svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
+                  <defs>
+                    <pattern id="mapGridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e3e8e4" stroke-width="0.8"/>
+                    </pattern>
+                    <pattern id="mapGridSubPattern" width="200" height="200" patternUnits="userSpaceOnUse">
+                      <rect width="200" height="200" fill="url(#mapGridPattern)"/>
+                      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#ced6d0" stroke-width="1.2"/>
+                    </pattern>
+                  </defs>
+
+                  <!-- Background Grid Layer -->
+                  <rect id="svgBackground" width="100%" height="100%" fill="url(#mapGridSubPattern)"/>
+
+                  <!-- Transformable World Group -->
+                  <g id="mapWorldGroup" transform="matrix(1 0 0 1 0 0)">
+                    <!-- Coordinate Axes at Origin -->
+                    <g id="mapAxesGroup" class="map-axes">
+                      <line x1="-1000" y1="0" x2="2000" y2="0" stroke="#b8c4bc" stroke-dasharray="4,4" stroke-width="1"/>
+                      <line x1="0" y1="-1000" x2="0" y2="2000" stroke="#b8c4bc" stroke-dasharray="4,4" stroke-width="1"/>
+                      <circle cx="0" cy="0" r="4" fill="#27734b"/>
+                      <text x="6" y="-6" class="axis-origin-label">Origin (0,0)</text>
+                    </g>
+
+                    <!-- Zones Partition Layer (Equal-Area Cells & Labels) -->
+                    <g id="mapZonesGroup" class="map-zones-layer"></g>
+
+                    <!-- Field Boundary Polygon -->
+                    <polygon id="mapFieldPolygon" class="field-boundary-poly" points=""/>
+
+                    <!-- Edge Dimensions Labels -->
+                    <g id="mapEdgeLabelsGroup" class="map-edge-labels"></g>
+
+                    <!-- Vertices Handles Layer -->
+                    <g id="mapVerticesGroup" class="map-vertices-layer"></g>
+
+                    <!-- Active Drawing Preview Line -->
+                    <polyline id="mapDrawPreview" class="map-draw-preview" points="" hidden/>
+                  </g>
+
+                  <!-- Compass Rose Overlay (North Arrow) -->
+                  <g id="mapCompass" class="map-compass" transform="translate(740, 50)">
+                    <circle cx="0" cy="0" r="22" fill="#ffffff" stroke="#dfe4df" stroke-width="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.06))"/>
+                    <path d="M 0 -16 L 4 -2 L 0 0 L -4 -2 Z" fill="#27734b"/>
+                    <path d="M 0 16 L 4 2 L 0 0 L -4 2 Z" fill="#b0bcc2"/>
+                    <text x="0" y="-19" text-anchor="middle" class="compass-n-label">N</text>
+                  </g>
+
+                  <!-- Metric Scale Bar Overlay -->
+                  <g id="mapScaleBarGroup" class="map-scale-bar" transform="translate(24, 466)">
+                    <rect x="0" y="-18" width="120" height="26" rx="4" fill="rgba(255,255,255,0.85)" stroke="#dfe4df"/>
+                    <line x1="10" y1="0" x2="110" y2="0" stroke="#17211c" stroke-width="2"/>
+                    <line x1="10" y1="-4" x2="10" y2="4" stroke="#17211c" stroke-width="2"/>
+                    <line x1="110" y1="-4" x2="110" y2="4" stroke="#17211c" stroke-width="2"/>
+                    <text x="60" y="-6" text-anchor="middle" id="scaleBarText" class="scale-bar-text">50 m</text>
+                  </g>
+
+                  <!-- Hover Coordinates Indicator -->
+                  <g id="mapCoordsGroup" class="map-coords-pill" transform="translate(640, 466)">
+                    <rect x="0" y="-18" width="136" height="26" rx="4" fill="rgba(255,255,255,0.85)" stroke="#dfe4df"/>
+                    <text x="68" y="-1" text-anchor="middle" id="cursorCoordsText" class="cursor-coords-text">X: 0 m · Y: 0 m</text>
+                  </g>
+                </svg>
+
+                <!-- Optional Satellite Container Backdrop (Clean provider-ready placeholder) -->
+                <div class="satellite-tile-layer" id="satelliteTileLayer" hidden>
+                  <div class="satellite-placeholder-msg">
+                    <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    <h4>Satellite Tile Layer Ready</h4>
+                    <p>Connect your satellite or base tile provider URL in configuration to activate photorealistic imagery.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Compact Field Summary Panel -->
+            <section class="panel mapping-summary-panel" aria-labelledby="fieldSummaryTitle">
+              <div class="section-row summary-header-row">
+                <h3 id="fieldSummaryTitle" class="summary-section-title" data-i18n="field_summary">Field spatial summary</h3>
+                <span class="summary-geometry-tag" id="summaryGeometryBadge">Authoritative Polygon</span>
+              </div>
+
+              <div class="summary-metrics-grid">
+                <div class="summary-metric-card">
+                  <span class="summary-metric-label" data-i18n="area">Area</span>
+                  <div class="summary-metric-value"><strong id="summaryArea">5.00 acres</strong></div>
+                  <span class="summary-metric-sub" id="summaryAreaSub">2.02 hectares</span>
+                </div>
+
+                <div class="summary-metric-card">
+                  <span class="summary-metric-label" data-i18n="perimeter">Perimeter</span>
+                  <div class="summary-metric-value"><strong id="summaryPerimeter">602.4 m</strong></div>
+                  <span class="summary-metric-sub" id="summaryPerimeterSub">Boundary length</span>
+                </div>
+
+                <div class="summary-metric-card">
+                  <span class="summary-metric-label" data-i18n="dimensions">Dimensions</span>
+                  <div class="summary-metric-value"><strong id="summaryDimensions">~200 × 101 m</strong></div>
+                  <span class="summary-metric-sub" id="summaryDimensionsSub">~656 × 332 ft</span>
+                </div>
+
+                <div class="summary-metric-card">
+                  <span class="summary-metric-label" data-i18n="location">Location</span>
+                  <div class="summary-metric-value"><strong id="summaryLocation">Hyderabad, Telangana</strong></div>
+                  <span class="summary-metric-sub" id="summaryLocationSub">Spatial reference</span>
+                </div>
+
+                <div class="summary-metric-card">
+                  <span class="summary-metric-label" data-i18n="crop">Active Crop</span>
+                  <div class="summary-metric-value"><strong id="summaryCrop">Wheat</strong></div>
+                  <span class="summary-metric-sub" id="summaryZonesCount">2 zones</span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- 3. Soil Nutrient Heatmap Section (Full-Width) -->
+        <section class="panel mapping-heatmap-panel" id="soilHeatmapSection" aria-labelledby="soilHeatmapTitle">
+          <div class="section-row heatmap-section-header">
+            <div>
+              <div class="heatmap-title-row">
+                <h2 id="soilHeatmapTitle" class="mapping-card-title">Soil Nutrient Heatmap</h2>
+                <span class="status-chip neutral heatmap-mode-chip" id="heatmapModeBadge">Spatial Model Estimate</span>
+              </div>
+              <p class="mapping-card-sub">Spatial estimate of nutrient distribution across the field</p>
+            </div>
+
+            <!-- Nutrient Selectors Tabs -->
+            <div class="nutrient-tab-group" role="tablist" aria-label="Nutrient Selectors">
+              <button type="button" class="nutrient-tab is-active" id="nutrientTabN" data-nutrient="N" role="tab" aria-selected="true">
+                <span class="nutrient-symbol">N</span>
+                <span>Nitrogen (N)</span>
+              </button>
+              <button type="button" class="nutrient-tab" id="nutrientTabP" data-nutrient="P" role="tab" aria-selected="false">
+                <span class="nutrient-symbol">P</span>
+                <span>Phosphorus (P)</span>
+              </button>
+              <button type="button" class="nutrient-tab" id="nutrientTabK" data-nutrient="K" role="tab" aria-selected="false">
+                <span class="nutrient-symbol">K</span>
+                <span>Potassium (K)</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="heatmap-stage-container">
+            <div class="heatmap-canvas-wrap" id="heatmapCanvasWrap">
+              <svg id="fieldHeatmapSvg" class="field-heatmap-svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <clipPath id="heatmapFieldClip">
+                    <polygon id="heatmapClipPolygon" points=""/>
+                  </clipPath>
+                </defs>
+
+                <!-- Base Grid Background -->
+                <rect width="100%" height="100%" fill="url(#mapGridSubPattern)"/>
+
+                <g id="heatmapWorldGroup" transform="matrix(1 0 0 1 0 0)">
+                  <!-- Interpolated Surface Image clipped to Field Polygon -->
+                  <g clip-path="url(#heatmapFieldClip)" id="heatmapSurfaceGroup">
+                    <image id="heatmapInterpolationImage" x="0" y="0" width="800" height="500" preserveAspectRatio="none" href=""/>
+                  </g>
+
+                  <!-- Field Boundary Overlay -->
+                  <polygon id="heatmapFieldBoundary" class="heatmap-boundary-poly" points=""/>
+
+                  <!-- Zone Partitions & Dynamic Overlay -->
+                  <g id="heatmapZonesGroup" class="heatmap-zones-layer"></g>
+                </g>
+
+                <!-- Compass Rose Overlay -->
+                <g class="map-compass" transform="translate(740, 50)">
+                  <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#dfe4df" stroke-width="1.5"/>
+                  <path d="M 0 -13 L 3 -2 L 0 0 L -3 -2 Z" fill="#27734b"/>
+                  <path d="M 0 13 L 3 2 L 0 0 L -3 2 Z" fill="#b0bcc2"/>
+                  <text x="0" y="-15" text-anchor="middle" class="compass-n-label">N</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Heatmap Analytics & Legend Sidebar -->
+            <div class="heatmap-info-bar">
+              <div class="heatmap-legend-card">
+                <div class="legend-header">
+                  <strong id="heatmapActiveNutrientName">Nitrogen (N)</strong>
+                  <span class="legend-unit" id="heatmapNutrientUnit">mg/kg</span>
+                </div>
+
+                <!-- Color scale gradient -->
+                <div class="heatmap-gradient-bar" aria-hidden="true"></div>
+                <div class="heatmap-scale-labels">
+                  <span id="heatmapScaleLow">Low (40)</span>
+                  <span id="heatmapScaleMed">Medium (80)</span>
+                  <span id="heatmapScaleHigh">High (130)</span>
+                </div>
+
+                <p class="heatmap-disclaimer">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                  Spatial model estimate for scouting planning. Connect spatial telemetry or soil sampling points to calibrate.
+                </p>
+              </div>
+
+              <div class="heatmap-zone-values-card">
+                <span class="heatmap-zones-heading">Zone-by-Zone Concentrations</span>
+                <div class="heatmap-zone-chips-list" id="heatmapZoneChipsList">
+                  <!-- Dynamically populated per zone -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Autonomous Rover Navigation Section (Full-Width) -->
+        <section class="panel mapping-rover-nav-panel" id="roverNavSection" aria-labelledby="roverNavTitle">
+          <div class="section-row rover-nav-header">
+            <div>
+              <div class="nav-title-row">
+                <h2 id="roverNavTitle" class="mapping-card-title">Autonomous Rover Navigation</h2>
+                <span class="status-chip neutral" id="surveyStatusChip">Simulation Ready</span>
+              </div>
+              <p class="mapping-card-sub">Plan a systematic field survey across all zones.</p>
+            </div>
+
+            <div class="rover-nav-actions">
+              <button type="button" class="primary-button rover-survey-btn" id="startSurveyBtn">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <span id="surveyBtnText">Start autonomous survey</span>
+              </button>
+              <button type="button" class="secondary-button" id="resetSurveyBtn" title="Reset route simulation">Reset</button>
+            </div>
+          </div>
+
+          <!-- Simulation Parameters Bar -->
+          <div class="rover-nav-params-bar">
+            <div class="nav-param-item">
+              <span class="nav-param-label">Path pattern</span>
+              <strong class="nav-param-val">Lawn mower / Serpentine</strong>
+            </div>
+            <div class="nav-param-item">
+              <span class="nav-param-label">Zone order</span>
+              <strong class="nav-param-val" id="navZoneOrderVal">A → B</strong>
+            </div>
+            <div class="nav-param-item">
+              <span class="nav-param-label">Row spacing</span>
+              <strong class="nav-param-val">5 m</strong>
+            </div>
+            <div class="nav-param-item">
+              <span class="nav-param-label">Rover speed</span>
+              <strong class="nav-param-val">0.3 m/s</strong>
+            </div>
+            <div class="nav-param-item live-stat" id="navActiveZoneItem">
+              <span class="nav-param-label">Current zone</span>
+              <strong class="nav-param-val" id="navCurrentZoneVal">—</strong>
+            </div>
+            <div class="nav-param-item live-stat" id="navProgressItem">
+              <span class="nav-param-label">Survey progress</span>
+              <strong class="nav-param-val" id="navProgressVal">0%</strong>
+            </div>
+          </div>
+
+          <!-- Rover Route Map Canvas Stage -->
+          <div class="rover-nav-canvas-wrap" id="roverNavCanvasWrap">
+            <svg id="roverNavSvg" class="rover-nav-svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
+              <rect width="100%" height="100%" fill="url(#mapGridSubPattern)"/>
+
+              <g id="roverWorldGroup" transform="matrix(1 0 0 1 0 0)">
+                <!-- Zone partitions & boundaries -->
+                <g id="roverZonesGroup" class="rover-zones-layer"></g>
+
+                <!-- Field boundary polygon -->
+                <polygon id="roverFieldBoundary" class="rover-field-boundary" points=""/>
+
+                <!-- Planned survey path lines (lawn-mower / serpentine) -->
+                <path id="roverSurveyPath" class="rover-survey-path" d="" fill="none"/>
+
+                <!-- Traveled survey path highlight -->
+                <path id="roverTraveledPath" class="rover-traveled-path" d="" fill="none"/>
+
+                <!-- Animated Rover Marker -->
+                <g id="roverSimMarker" class="rover-sim-marker" transform="translate(-100, -100)">
+                  <circle cx="0" cy="0" r="14" class="rover-sim-halo"/>
+                  <circle cx="0" cy="0" r="7" class="rover-sim-core"/>
+                  <polygon id="roverHeadingArrow" points="0,-12 4,-3 -4,-3" fill="#ffffff"/>
+                </g>
+              </g>
+
+              <!-- Compass Rose Overlay -->
+              <g class="map-compass" transform="translate(740, 50)">
+                <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#dfe4df" stroke-width="1.5"/>
+                <path d="M 0 -13 L 3 -2 L 0 0 L -3 -2 Z" fill="#27734b"/>
+                <path d="M 0 13 L 3 2 L 0 0 L -3 2 Z" fill="#b0bcc2"/>
+                <text x="0" y="-15" text-anchor="middle" class="compass-n-label">N</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="rover-nav-footer-note">
+            <span class="telemetry-ready-dot"></span>
+            <span>Autonomous survey planning & simulation parameters active · Physical rover motors not connected.</span>
+          </div>
+        </section>
       </section>
 
       <section class="page" id="page-system" role="tabpanel" aria-labelledby="tab-system" hidden>
         <header class="page-header compact"><div><p class="overline" data-i18n="system">System</p><h1 data-i18n="device_status">Device status</h1></div><p data-i18n="system_intro">Connection, local models, and farm settings for setup and support.</p></header>
         <div class="system-grid">
           <section class="panel" aria-labelledby="accountTitle"><div class="section-row"><h2 id="accountTitle" data-i18n="account">Account</h2><span class="status-chip" id="accountChip" data-i18n="signed_out">Signed out</span></div><p class="panel-copy" id="accountCopy" data-i18n="account_help">Create an account to attach your scans and model runs to a name. The farm dashboard stays usable without signing in.</p><div class="account-actions" id="accountSignedOut"><button class="secondary-button" id="openSignupBtn" type="button" data-i18n="sign_up">Sign up</button><button class="secondary-button" id="openLoginBtn" type="button" data-i18n="sign_in">Sign in</button></div><div class="account-actions" id="accountSignedIn" hidden><p id="signedInAs"></p><button class="secondary-button" id="logoutBtn" type="button" data-i18n="sign_out">Sign out</button></div></section>
+          <section class="panel" aria-labelledby="aiEngineTitle">
+            <div class="section-row">
+              <h2 id="aiEngineTitle" data-i18n="ai_engine_title">AI Engine</h2>
+              <div class="segmented-control" role="group" aria-label="AI Engine">
+                <button type="button" class="segmented-btn is-active" id="systemEngineBtnCloud" data-engine="cloud">
+                  <span class="mode-icon">☁</span> <span data-i18n="mode_cloud_label">Cloud AI</span>
+                </button>
+                <button type="button" class="segmented-btn" id="systemEngineBtnEdge" data-engine="edge">
+                  <span class="mode-icon">⚡</span> <span data-i18n="mode_edge_label">Edge AI</span>
+                </button>
+              </div>
+            </div>
+            <p class="panel-copy" data-i18n="ai_engine_desc">Choose how PRAGYA processes AI analysis.</p>
+            <div class="engine-desc-list">
+              <p class="engine-desc-item"><b>Cloud AI:</b> <span data-i18n="cloud_engine_desc">Uses the connected cloud AI/Gemini service and requires internet access.</span></p>
+              <p class="engine-desc-item"><b>Edge AI:</b> <span data-i18n="edge_engine_desc">Runs supported AI models locally on the device and does not require internet access.</span></p>
+            </div>
+            <p class="panel-footnote engine-status-line" id="systemEngineStatusLine">Current engine: Cloud AI</p>
+          </section>
           <section class="panel" aria-labelledby="modelTitle"><div class="section-row"><h2 id="modelTitle" data-i18n="installed_models">Installed models</h2><span class="status-chip success" data-i18n="local">Local</span></div><dl class="details"><div><dt data-i18n="disease_model">Disease model</dt><dd id="modelName">—</dd></div><div><dt data-i18n="last_inference">Last inference</dt><dd id="modelSpeed">—</dd></div><div><dt data-i18n="confidence">Confidence</dt><dd id="modelConfidence">—</dd></div><div><dt data-i18n="cloud_required">Cloud required</dt><dd id="cloudRequired">—</dd></div></dl><p class="panel-footnote" data-i18n="models_shortcut">Run models from the AI Models page.</p></section>
           <section class="panel" aria-labelledby="locationTitle"><h2 id="locationTitle" data-i18n="farm_location">Farm location</h2><p class="panel-copy" data-i18n="location_help">Used for live weather only when sensor GPS is unavailable.</p><form id="locationForm" novalidate><label for="locationInput" data-i18n="village_city">Village or city</label><div class="input-row"><input id="locationInput" type="text" maxlength="120" autocomplete="address-level2" placeholder="e.g. Ludhiana, Punjab"><button class="secondary-button" id="saveLocationBtn" type="submit" data-i18n="save">Save</button></div><p class="form-status" id="locationStatus" role="status" aria-live="polite"></p></form></section>
           <section class="panel" aria-labelledby="accessTitle"><h2 id="accessTitle" data-i18n="write_access">Write access</h2><p class="panel-copy" data-i18n="token_help">If this device protects changes with an API token, enter it for this browser session.</p><form id="tokenForm"><label for="tokenInput" data-i18n="api_token">API token</label><div class="input-row"><input id="tokenInput" type="password" autocomplete="off" placeholder="Optional"><button class="secondary-button" type="submit" data-i18n="apply">Apply</button></div><p class="form-status" id="tokenStatus" role="status" aria-live="polite"></p></form></section>
@@ -140,10 +1291,10 @@
     </main>
   </div>
 
-  <nav class="mobile-nav" aria-label="Main navigation"><button class="is-active" data-tab="overview" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h6V4H4v9Zm10 7h6v-9h-6v9ZM4 20h6v-3H4v3Zm10-13h6V4h-6v3Z"/></svg><span data-i18n="nav_overview">Overview</span></button><button data-tab="field" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 3.5C13 3.7 7.8 6 5.4 10.1c-1.7 2.9-1.3 6 .7 7.7L3.8 20a1 1 0 0 0 1.4 1.4l2.3-2.3c1.9 1 4.3.8 6.5-.5 4.3-2.5 6.5-7.7 6.5-14.1a1 1 0 0 0-1-1Z"/></svg><span data-i18n="nav_field_short">Field</span></button><button data-tab="models" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v6H4V5Zm9 0h7v10h-7V5ZM4 13h7v6H4v-6Z"/></svg><span data-i18n="nav_models_short">Models</span></button><button data-tab="history" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 1-8 8H2a10 10 0 1 0 3-7.1V3h2v5H2V6h2.1A9.9 9.9 0 0 1 12 4Z"/></svg><span data-i18n="nav_history">History</span></button><button data-tab="system" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 13a7.8 7.8 0 0 0 0-2l2-1.5-2-3.5-2.4 1a8 8 0 0 0-1.7-1L15 3.5h-4L10.7 6A8 8 0 0 0 9 7L6.6 6l-2 3.5 2 1.5a7.8 7.8 0 0 0 0 2l-2 1.5 2 3.5L9 17a8 8 0 0 0 1.7 1l.3 2.5h4l.3-2.5a8 8 0 0 0 1.7-1l2.4 1 2-3.5-2-1.5Z"/></svg><span data-i18n="nav_system">System</span></button></nav>
+  <nav class="mobile-nav" aria-label="Main navigation"><button class="is-active" data-tab="overview" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h6V4H4v9Zm10 7h6v-9h-6v9ZM4 20h6v-3H4v3Zm10-13h6V4h-6v3Z"/></svg><span data-i18n="nav_overview">Overview</span></button><button data-tab="field" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 3.5C13 3.7 7.8 6 5.4 10.1c-1.7 2.9-1.3 6 .7 7.7L3.8 20a1 1 0 0 0 1.4 1.4l2.3-2.3c1.9 1 4.3.8 6.5-.5 4.3-2.5 6.5-7.7 6.5-14.1a1 1 0 0 0-1-1Z"/></svg><span data-i18n="nav_field_short">Field</span></button><button data-tab="models" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v6H4V5Zm9 0h7v10h-7V5ZM4 13h7v6H4v-6Z"/></svg><span data-i18n="nav_models_short">Edge AI</span></button><button data-tab="history" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 1-8 8H2a10 10 0 1 0 3-7.1V3h2v5H2V6h2.1A9.9 9.9 0 0 1 12 4Z"/></svg><span data-i18n="nav_history">History</span></button><button data-tab="system" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.4 13a7.8 7.8 0 0 0 0-2l2-1.5-2-3.5-2.4 1a8 8 0 0 0-1.7-1L15 3.5h-4L10.7 6A8 8 0 0 0 9 7L6.6 6l-2 3.5 2 1.5a7.8 7.8 0 0 0 0 2l-2 1.5 2 3.5L9 17a8 8 0 0 0 1.7 1l.3 2.5h4l.3-2.5a8 8 0 0 0 1.7-1l2.4 1 2-3.5-2-1.5Z"/></svg><span data-i18n="nav_system">System</span></button></nav>
   <div class="auth-modal" id="authModal" hidden>
     <div class="auth-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
-      <div class="section-row"><h2 id="authTitle" data-i18n="sign_up">Sign up</h2><button class="icon-close" id="closeAuthBtn" type="button" aria-label="Close">×</button></div>
+      <div class="section-row"><h2 id="authTitle" data-i18n="sign_up">Sign up</h2><button class="icon-close auth-close-btn" id="closeAuthBtn" type="button" aria-label="Close" title="Close"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div>
       <p class="panel-copy" id="authHelp" data-i18n="signup_help">Choose a username and a password of at least 8 characters.</p>
       <form id="authForm">
         <label for="authUsername" data-i18n="username">Username</label>
@@ -154,6 +1305,25 @@
         <button class="primary-button" id="authSubmitBtn" type="submit"><span data-i18n="sign_up">Sign up</span></button>
       </form>
       <p class="panel-footnote"><button class="text-link" id="switchAuthBtn" type="button" data-i18n="have_account">Already have an account? Sign in</button></p>
+    </div>
+  </div>
+  <div class="chat-confirm-modal" id="chatConfirmModal" role="dialog" aria-modal="true" aria-labelledby="chatConfirmTitle" aria-describedby="chatConfirmDesc" hidden>
+    <div class="chat-confirm-backdrop" id="chatConfirmBackdrop"></div>
+    <div class="chat-confirm-card" tabindex="-1">
+      <div class="chat-confirm-header">
+        <h3 id="chatConfirmTitle">Confirm Action</h3>
+        <button class="icon-close chat-confirm-close-btn" id="chatConfirmCloseBtn" type="button" aria-label="Close" title="Close">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <p class="chat-confirm-desc" id="chatConfirmDesc">Are you sure?</p>
+      <div class="chat-confirm-actions">
+        <button type="button" class="secondary-button" id="chatConfirmCancelBtn" data-i18n="cancel">Cancel</button>
+        <button type="button" class="primary-button" id="chatConfirmActionBtn">Confirm</button>
+      </div>
     </div>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>

@@ -1,5 +1,5 @@
 [Unit]
-Description=Kisan Mitra edge server
+Description=PRAGYA edge server
 Documentation=https://github.com/Mustafyy8/kisan-mitra
 After=network-online.target
 Wants=network-online.target

@@ -1,4 +1,4 @@
-"""Optional Arduino Mega serial bridge for the KISAN MITRA edge server.
+"""Optional Arduino Mega serial bridge for the PRAGYA edge server.
 
 Arduino should send one JSON object per line, for example:
 {"npk":{"n":35,"p":21,"k":48},"moisture":42,"temperature":31.4,"humidity":74,"ph":6.5}
@@ -11,7 +11,7 @@ import serial
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Forward Arduino JSON telemetry to KISAN MITRA")
+    parser = argparse.ArgumentParser(description="Forward Arduino JSON telemetry to PRAGYA")
     parser.add_argument("port", help="Example: /dev/ttyACM0")
     parser.add_argument("--baud", type=int, default=9600)
     parser.add_argument("--server", default="http://127.0.0.1:3000/api/sensors")
