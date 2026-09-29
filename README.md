@@ -13,8 +13,8 @@ PRAGYA (Predictive Robotics for Agricultural Growth & Yield Analytics) is a Rasp
 ### 1. Get the code
 
 ```bash
-git clone https://github.com/Mustafyy8/kisan-mitra.git
-cd kisan-mitra
+git clone https://github.com/Junaid0-0/PRAGYA.git
+cd PRAGYA
 ```
 
 ### 2. Create the environment and install dependencies
@@ -35,8 +35,8 @@ cp .env.example .env
 
 Then edit `.env`:
 
-- **`KISAN_SECRET_KEY`** — any long random string; used to sign sessions. Generate one with `python -c "import secrets; print(secrets.token_hex(32))"`. If unset, the server uses a random per-boot key and warns on startup.
-- **`KISAN_API_TOKEN`** *(optional)* — when set, non-auth writes (`POST /api/sensors`, `/api/disease`, `/api/profile`, `/api/models/*`, and `/api/chat/image`) require an `Authorization: Bearer <token>` header. A signed-in dashboard session also grants write access.
+- **`PRAGYA_SECRET_KEY`** — any long random string; used to sign sessions. Generate one with `python -c "import secrets; print(secrets.token_hex(32))"`. If unset, the server uses a random per-boot key and warns on startup.
+- **`PRAGYA_API_TOKEN`** *(optional)* — when set, non-auth writes (`POST /api/sensors`, `/api/disease`, `/api/profile`, `/api/models/*`, and `/api/chat/image`) require an `Authorization: Bearer <token>` header. A signed-in dashboard session also grants write access.
 - **`OPENWEATHER_API_KEY`** / **`OPENWEATHER_CITY`** *(optional)* — live temperature/humidity/rainfall from OpenWeatherMap, with automatic fallback to local sensors when offline (see Production notes).
 - **`GEMINI_API_KEY`** / **`GEMINI_MODEL`** *(optional)* — enables text chat and explanations of local model results. Image bytes are never sent to Gemini. All image screening works without a key.
 
@@ -56,7 +56,7 @@ curl -X POST http://localhost:3000/api/sensors \
   -d '{"npk":{"n":90,"p":42,"k":43},"moisture":42,"temperature":26,"humidity":65,"ph":6.8}'
 ```
 
-(If you set `KISAN_API_TOKEN`, add `-H "Authorization: Bearer <token>"`.) The dashboard updates live over Socket.IO — no refresh needed. Upload a leaf photo in the **Leaf disease scan** panel to test the ONNX model.
+(If you set `PRAGYA_API_TOKEN`, add `-H "Authorization: Bearer <token>"`.) The dashboard updates live over Socket.IO — no refresh needed. Upload a leaf photo in the **Leaf disease scan** panel to test the ONNX model.
 
 ### 6. Run the verification suite
 
@@ -78,8 +78,8 @@ What it does:
 
 1. Creates `.venv` and installs `requirements.txt`.
 2. Runs the test suite — installation aborts if anything is broken.
-3. Creates `.env` from the template if missing (with a generated `KISAN_SECRET_KEY`).
-4. Installs `kisan-mitra.service`, enables it for boot, and starts it.
+3. Creates `.env` from the template if missing (with a generated `PRAGYA_SECRET_KEY`).
+4. Installs `pragya.service`, enables it for boot, and starts it.
 
 Useful commands:
 
@@ -98,7 +98,7 @@ Send one JSON object per serial line, then run:
 ```bash
 python serial_bridge.py /dev/ttyACM0 --baud 9600
 # when the server requires a token:
-python serial_bridge.py /dev/ttyACM0 --token <KISAN_API_TOKEN>
+python serial_bridge.py /dev/ttyACM0 --token <PRAGYA_API_TOKEN>
 ```
 
 Useful telemetry fields are `npk.n`, `npk.p`, `npk.k`, `moisture`, `temperature`, `humidity`, `ph`, `ec`, `organic_carbon`, `rainfall`, and `gps`. The serial bridge posts them to Flask and Socket.IO updates connected dashboards without a refresh.
@@ -150,7 +150,7 @@ Run `python train_crop_model.py` or `python train_soil_model.py` to recreate the
 | `GET /api/recommendations` | Crop-model rankings and farmer-facing recommendation. |
 | `GET /api/health` | Operational health: model readiness, sensor freshness, and database status. |
 | `GET /api/climate`, `/api/alerts`, `/api/history` | Supporting local dashboard data. |
-| `POST /api/profile` | Update farm profile (requires `KISAN_API_TOKEN` if configured). |
+| `POST /api/profile` | Update farm profile (requires `PRAGYA_API_TOKEN` if configured). |
 | `GET /api/models`, `/api/ai/status` | List local/prototype models and report optional cloud-AI availability. |
 | `POST /api/models/crop`, `/api/models/soil` | Run a selected tabular model from the latest persisted sensor reading and save the result. Explicit JSON inputs remain accepted for API clients. |
 | `POST /api/models/pest` | Run the local cereal-field insect classifier from an uploaded image. |
@@ -165,12 +165,12 @@ Run `python train_crop_model.py` or `python train_soil_model.py` to recreate the
 
 Base URL: `http://<pi-ip>:3000`. All read endpoints return JSON and require no
 authentication. Signup, login, logout, and TTS are not token-gated. When
-`KISAN_API_TOKEN` is configured, sensor, disease, profile, and model-run write
+`PRAGYA_API_TOKEN` is configured, sensor, disease, profile, and model-run write
 endpoints require this header unless the request has a valid signed dashboard
 session:
 
 ```http
-Authorization: Bearer <KISAN_API_TOKEN>
+Authorization: Bearer <PRAGYA_API_TOKEN>
 ```
 
 ### 1. Send sensor telemetry: `POST /api/sensors`
@@ -203,7 +203,7 @@ it in SQLite, recalculates alerts and model outputs, and broadcasts a
 ```bash
 curl -X POST http://localhost:3000/api/sensors \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer <KISAN_API_TOKEN>' \
+  -H 'Authorization: Bearer <PRAGYA_API_TOKEN>' \
   --data @telemetry.json
 ```
 
@@ -222,7 +222,7 @@ through Socket.IO.
 
 ```bash
 curl -X POST http://localhost:3000/api/disease \
-  -H 'Authorization: Bearer <KISAN_API_TOKEN>' \
+  -H 'Authorization: Bearer <PRAGYA_API_TOKEN>' \
   -F 'image=@/path/to/leaf.jpg'
 ```
 
@@ -272,14 +272,14 @@ weather cache, and broadcasts the updated farm payload.
    model in the single scan worker, stores the result, and broadcasts the new
    dashboard state.
 
-SQLite state is created under `runtime/kisan_mitra.db`. Detailed source, licensing, and validation notes are in [MODEL_SOURCES.md](MODEL_SOURCES.md).
+SQLite state is created under `runtime/pragya.db`. Detailed source, licensing, and validation notes are in [MODEL_SOURCES.md](MODEL_SOURCES.md).
 
 ## Production notes
 
 - **Leaf scans outside the 15 trained classes are rejected, not guessed.** The model is a closed-set classifier, so without a guard it reports a tomato disease for almost any image (a blank white image scored 99% `Tomato_Late_blight`). `MLService.diagnose` now rejects scans whose penultimate-layer features fall outside the envelope of the predicted class (calibrated by `python train_disease_ood.py`; see [MODEL_SOURCES.md](MODEL_SOURCES.md)); `/api/health` reports the gate's readiness under `models.disease.ood`. The model itself only knows pepper, potato, and tomato — supported-crop options and a swap procedure are documented in [MODEL_SOURCES.md](MODEL_SOURCES.md).
 - **Use 64-bit Raspberry Pi OS (aarch64).** `onnxruntime` no longer publishes wheels for 32-bit ARM (armv7l), so `pip install -r requirements.txt` fails on 32-bit Pi OS. On a Pi 4 expect roughly **1-3 seconds per leaf scan** with the EfficientNetV2 model; scans are queued through a single background worker so the dashboard stays responsive. The Random Forest models are effectively instant.
-- **Set `KISAN_SECRET_KEY`** (any long random string). Without it the server falls back to a random per-boot key and warns on startup.
-- **Set `KISAN_API_TOKEN` to protect write endpoints.** When set, `POST /api/sensors`, `POST /api/disease`, `POST /api/profile`, and `POST /api/models/*` require an `Authorization: Bearer <token>` header unless the dashboard has a valid signed-in session. The read-only dashboard is intentionally open so farm staff can view it without credentials. To use protected device writes from the dashboard, enter the token under **System -> Write access**; it is kept only in that browser tab's session storage.
+- **Set `PRAGYA_SECRET_KEY`** (any long random string). Without it the server falls back to a random per-boot key and warns on startup.
+- **Set `PRAGYA_API_TOKEN` to protect write endpoints.** When set, `POST /api/sensors`, `POST /api/disease`, `POST /api/profile`, and `POST /api/models/*` require an `Authorization: Bearer <token>` header unless the dashboard has a valid signed-in session. The read-only dashboard is intentionally open so farm staff can view it without credentials. To use protected device writes from the dashboard, enter the token under **System -> Write access**; it is kept only in that browser tab's session storage.
 - **Optional live weather (offline-safe):** set `OPENWEATHER_API_KEY` in `.env` to enrich the dashboard with current temperature/humidity/rainfall from OpenWeatherMap. The weather location is resolved in this order: **GPS coordinates from the Arduino's telemetry, then the farm location saved on the dashboard** (System -> Farm location), then `OPENWEATHER_CITY` as the fallback. Fetches are cached for 30 minutes and time out after 3 seconds; if the request fails for any reason (offline, revoked key, rate limit) the app silently falls back to the local sensor readings, so the farm keeps working with no internet at all. The dashboard connection area shows the active source and city.
 - The legacy Streamlit application and its committed third-party API keys (Roboflow, OpenWeatherMap, Google Gemini) were removed in this branch. If you ever used those keys, **revoke/rotate them** in the provider consoles; they are no longer referenced anywhere in the codebase.
-- Sensor and scan history is stored in `runtime/kisan_mitra.db` (auto-created, git-ignored). The dashboard shows clearly labelled demo telemetry until real readings arrive.
+- Sensor and scan history is stored in `runtime/pragya.db` (auto-created, git-ignored). The dashboard shows clearly labelled demo telemetry until real readings arrive.
